@@ -8,6 +8,7 @@
 
 
 **How does a core work?**
+
 To raid an Island you first need to destroy the core of an Island. This core can be upgraded with "Essences" and gets more and more health per Upgrade. After the core of an island is being destroyed the attackers are able to completely raid the base and loot them. The defenders of the base can defend their base too, with traps or other Features. You can also save money in a Core.
 If you click on the core of your faction you open a GUI where you can do different things, just as giving it Essences and saving money.
 
