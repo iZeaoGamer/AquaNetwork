@@ -42,3 +42,19 @@ If you click on the core of your faction you open a GUI where you can do differe
 - Fixed crash when breaking/placing blocks from an island that's not yours.
 
 - Added world border plugin!
+
+- Added minions! Finally!
+
+- Added mage minions! How they work:
+
+The mage minions spawn (currently 1) iron golem (Guards) at the same time. The mage minions are used to defend your core. If someone is trying to attack the core, the guards of the core will try to protect it as much as possible. Will you be able to sneak in those destroy-able vibes?
+
+- Due to many feedback, I've decided to make island generating work differently than the previous update. Instead of relying on how much blocks per island, it'll now generate an island and teleport you to a random X and Z coordinate automatically. We decided to do this because raiding was easier than first thought. So I've decided to make island generating random per island, so you could be very far away or further enough from an island. Thanks to @Mitchell for this suggestion!
+
+- Guards will no longer attack the island owner and its members. 
+
+- Added a next spawn timer for Mage Minions, so they spawn once every 30 minutes (will spawn atleast 2 per spawning in the next update or so).
+
+- You can no longer attack your own/island's guards (Iron golems).
+
+- Fixed a bug, where core and the player spawned somewhere near the actual spawn location, and not exactly where the spawn located was meant to go. Now, it'll spawn you to its correct positioning, including cores, and the sender. Along with this, it'll also set the spawn per island located to where it's meant to go when you use /is tp.
