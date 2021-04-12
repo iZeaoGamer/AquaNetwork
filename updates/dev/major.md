@@ -85,3 +85,9 @@ Level 3 has 6h Cooldown.
 - We've fixed the interaction spam to do with Interacting with vanished items (Staff mode), so you should no longer receive any spam when clicked on once.
 
 - Added new command: /socialspy AKA /ss - Socialspy commands.
+
+- Fixed crash when opening the upgrade system for Essence Minions.
+
+- Will now state if the level and cost is at max level, instead of continously appearing a level you simply can't access, possibly due to the maximum of levels you can go to.
+
+- Fixed incorrect message bug when on the selecting a trap screen. It'd state already unlocked if you haven't unlocked it yet, and will do the same vice versa.
