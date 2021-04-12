@@ -58,3 +58,30 @@ The mage minions spawn (currently 1) iron golem (Guards) at the same time. The m
 - You can no longer attack your own/island's guards (Iron golems).
 
 - Fixed a bug, where core and the player spawned somewhere near the actual spawn location, and not exactly where the spawn located was meant to go. Now, it'll spawn you to its correct positioning, including cores, and the sender. Along with this, it'll also set the spawn per island located to where it's meant to go when you use /is tp.
+
+- Added new minion: Essence.
+Essence Minion, is a minion that lets u claim an Essence every 12h. You can upgrade the Essence Minion with more Essences.
+There are 3 Levels on the minion.
+To Level from 1 to 2 you need 3 Essences.
+From Level 2 to 3 you need 5.
+Level 1 has 12h Cooldown
+Level 2 has 8h Cooldown
+Level 3 has 6h Cooldown.
+
+- Added Upgradeable cores. Thanks to the feedback, this is now a thing. We may change how upgrading works soon. But for now, this'll be the design and what it'll look like.
+
+- Finally added social spy to the server!
+
+- Added new API function: getSocialSpyPlayers(). This function will retrieve all online players using socialspy.
+
+- All chat messages will now appear even if the database is down directly to discord.
+
+- You can now talk in /sc, even if the database is offline.
+
+- You can now talk publicly from in-game to discord whilst the database is offline too now. Before, this wouldn't of been a thing.
+
+- #👀・last-seen, #⚕・staff-commands and #🤖・player-commands now appear messages even when the database is offline.
+
+- We've fixed the interaction spam to do with Interacting with vanished items (Staff mode), so you should no longer receive any spam when clicked on once.
+
+- Added new command: /socialspy AKA /ss - Socialspy commands.
