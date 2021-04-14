@@ -102,3 +102,44 @@ Level 3 has 6h Cooldown.
 
 ## Other Changes
 * We've  made some changes to #👀・last-seen and other minor features, such as If a minute, second, hour, or day is at 1, it won't display the "s". As that's grammatical incorrect, and shouldn't be used all the time. This is now correct.
+
+- Fixed crash when loading scoreboards.
+
+- We've completely rewritten scoreboards, once again! They now look 1000x better than before.
+
+- Added Vanish Support to the new scoreboard system.
+
+- Fixed issues where the old scoreboard system would interfere with the new scoreboard system (In terms with vanishing).
+
+- We've added a lot of things to nametags! Such as:
+
+* Device
+* Ping
+* Hearts
+* Faction name and faction rank.
+* Player rank
+
+- We've added our own Factions System!
+
+- Added Activity Points. 
+
+How they work?
+- Activity points, is a currency system for Factions, where you can do certain subjective's to receive Activity points. There are a few ways you can get Activity points. The ways are:
+* Mining - 0.5 per break.
+* Placing - 0.25 per place.
+* Being active on the server. 0.05 per second
+* Killing an enemy - 100 per kill.
+
+You can also use Activity points in /f shop, where you can buy certain items with Activity points.
+
+- Added spawners in /f shop! Yay!
+
+- Fixed Money Notes not being money notes, and would instantly give you the money from /f shop.
+
+- We've made Guardians 1000x better than before! AI should now function, slower, but better. It'll get the job done.
+
+- Guardians now regen hearts every tick. Can you kill them and steal the cores!?
+
+- Added /upgrade - All Island upgrades.
+
+- You can now increase your island size by 50% (+50 blocks per level) using /upgrade menu.
