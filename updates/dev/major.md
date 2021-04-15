@@ -20,8 +20,6 @@ If you click on the core of your faction you open a GUI where you can do differe
 
 - Added custom island area (Thanks to @kewl kenny for this!)
 
-- All islands are now 60 blocks away from each other. This is to make raiding possible, and how you do that, is build to another island from your island, and you can try to get in by many varies of ways (TNT, Creeper eggs, breaking, and so much more!)
-
 - Fixed being able to kill the core when you're a member of an owner's island, and if the owner of the island is offline.
 
 - Added check to ensure the killer is the same as one of the list of Members from /is members.
