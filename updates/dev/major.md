@@ -157,7 +157,7 @@ You can also use Activity points in /f shop, where you can buy certain items wit
 - We've fixed many bugs relating to command exploits, and being able to use certain commands whilst muted.
 
 - We've implemented a brand new system, where if you join the server, you need to talk atleast 1-2 times for the chat to display. This is because it's attempting to load your mutes and bans in (if any). If not, it'll allow you to talk. The message will say "Try talk again as we are checking for your mutes". Once spoken, it'll either cancel the chat event for the specific player (if muted), or it'll allow you to speak. We do this because of MySQL: MySQL performs a async task, which takes a few miliseconds - 1 second to complete. Because the PlayerChatEvent is an instant event, we can't actually uncancel the event when you join, as if we did that, then there would be a lot of bypasses to the mute system, and that wouldn't be good. My goal is to limit the bypasses for mute system.
-[11:53]
+
 - Fixed Mute messages displaying incorrectly.
 
 - Fixed ban messages displaying incorrectly.
@@ -181,7 +181,7 @@ How they work?
 - Fixed mute messages from displaying incorrectly.
 
 - Fixed mute command from kicking you from the server.
-[11:53]
+
 - Added a new system, where if you join, you have to chat or use commands atleast 1-2 times. This change is because of MySQL - How MYSQL works for us, is async task. This basically prevents any server strain whilst it works in the background. That's the main point of a async task. The reason behind this change was because the Player Chat Event is instant, so if someone types, it'll instantly activate the event. This is a messy hack to prevent mute evaders. It'll simply check to see if you're muted or not. If you're muted, it'll rightly state so. If you aren't, you can chat freely. The difference between the join event, and the chat event is simple - PlayerJoinEvent can be delayed using a async task. Because when you join, it'll allow you to use other things in the background, like async task. With PlayerChatEvent, it activates instantly. You can't use async task using it to cancel the event, as that's not possible. So writing this hack prevents mute evaders in so many ways. I know this may be annoying to most of you, but if there was any other alternatives, I'd simply do it. 
 
 - Fixed bans and mutes not saving to MySQL Database.
