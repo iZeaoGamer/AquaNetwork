@@ -141,3 +141,51 @@ You can also use Activity points in /f shop, where you can buy certain items wit
 - Added /upgrade - All Island upgrades.
 
 - You can now increase your island size by 50% (+50 blocks per level) using /upgrade menu.
+
+- We've added a new channel: #👊・punishments. This channel will log all punishments, made to the server automatically. If you: Unban a user, ban a user, mute or unmute a user, it'll now state this in #👊・punishments. Please keep in mind - The reason why we still have #❕・punishment-format and #📝・punishment-logs is because when punishing a user, you still need to provide proof of that punishment. The punishment system can't automatically do that for you, hence why we have to do it manually.
+
+- All bans and mutes are now through a MySQL Database. This means once we add more servers, all punishments will be through the network (All servers), not a single server.
+
+- Added new command: /ban
+
+- Added new command: /mute
+
+- Added new command: /unmute
+
+- Added new command: /unban
+
+- We've fixed many bugs relating to command exploits, and being able to use certain commands whilst muted.
+
+- We've implemented a brand new system, where if you join the server, you need to talk atleast 1-2 times for the chat to display. This is because it's attempting to load your mutes and bans in (if any). If not, it'll allow you to talk. The message will say "Try talk again as we are checking for your mutes". Once spoken, it'll either cancel the chat event for the specific player (if muted), or it'll allow you to speak. We do this because of MySQL: MySQL performs a async task, which takes a few miliseconds - 1 second to complete. Because the PlayerChatEvent is an instant event, we can't actually uncancel the event when you join, as if we did that, then there would be a lot of bypasses to the mute system, and that wouldn't be good. My goal is to limit the bypasses for mute system.
+[11:53]
+- Fixed Mute messages displaying incorrectly.
+
+- Fixed ban messages displaying incorrectly.
+
+- Fixed mute command from kicking you.
+
+- You can now mute, and ban offline players also.
+
+- We've made bans and mutes slightly better!
+
+How they work?
+- You can use the command: /ban <player> <type> <time> <reason>
+
+<type> is the type of ban/mute you'd like to use. Valid ones are: temp and perm. If using perm, you only use /ban <player> perm <reason>. If using temp, you can use /ban <player> temp <time> <reason>.
+<time> - You can use time formats like d, m, s, etc. d means Day, m means minutes, and s means seconds. We also have premade timers for you, so if you want to ban or mute someone, you can use the valid reasons, as described in /ban or /mute usage.
+
+<reason> - Just put a reason for the punishment. It needs to be valid, or it won't go anywhere, and we'd simply unban/unmute them.
+
+- Fixed ban messages from displaying incorrectly.
+
+- Fixed mute messages from displaying incorrectly.
+
+- Fixed mute command from kicking you from the server.
+[11:53]
+- Added a new system, where if you join, you have to chat or use commands atleast 1-2 times. This change is because of MySQL - How MYSQL works for us, is async task. This basically prevents any server strain whilst it works in the background. That's the main point of a async task. The reason behind this change was because the Player Chat Event is instant, so if someone types, it'll instantly activate the event. This is a messy hack to prevent mute evaders. It'll simply check to see if you're muted or not. If you're muted, it'll rightly state so. If you aren't, you can chat freely. The difference between the join event, and the chat event is simple - PlayerJoinEvent can be delayed using a async task. Because when you join, it'll allow you to use other things in the background, like async task. With PlayerChatEvent, it activates instantly. You can't use async task using it to cancel the event, as that's not possible. So writing this hack prevents mute evaders in so many ways. I know this may be annoying to most of you, but if there was any other alternatives, I'd simply do it. 
+
+- Fixed bans and mutes not saving to MySQL Database.
+
+- We've added a brand new system for Aliases, which has more than one alias option. If you use /alias <player>, it'll state: "IP, XUID, Self Signed ID, Device ID, and Client Random ID. "
+
+- You can now alias offline players finally!
