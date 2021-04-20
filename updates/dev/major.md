@@ -218,5 +218,5 @@ the database will recognize this, and display 160 max player slots instead of 80
 - 
 - Network::getServerName() no longer relies on the server's MOTD. It'll return the actual name of the server. This is so we can add our own MOTD.
 
-CURRENT KNOWN ISSUES WITH THIS UPDATE
+## CURRENT KNOWN ISSUES WITH THIS UPDATE
 - Sometimes the Maintenance mode would be set to true or false, even if it's not whitelisted. This would only occur when you're using the command from another server after that specific server is being whitelisted/unwhitelisted.
