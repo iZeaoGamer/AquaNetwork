@@ -189,3 +189,34 @@ How they work?
 - We've added a brand new system for Aliases, which has more than one alias option. If you use /alias <player>, it'll state: "IP, XUID, Self Signed ID, Device ID, and Client Random ID. "
 
 - You can now alias offline players finally!
+
+- We've implemented a new network methoding stage! How it works:
+
+So currently, this doesn't affect anything, but once more servers get added, you will see a good difference.
+
+## HOW IT WORKS
+- We are adding our servers to MySQL. As a good thing about MySQL, is you can actually make a multi-server with it. We have created our very own MYSQL Database for our servers through out the network. Those affected will be/are:
+
+* Total Online Players - When we add more than one server, you can tell the Online Player Count and Max Player Count is higher than previously. No, this isn't fake slots. This is because we managed to link our server slots, and max player slots to the MySQL Database, which displays more players / max players than usual: It displays total amount of players online and the total max players online, if +80. For example, if there was two servers, and they were both 80 max slots,
+the database will recognize this, and display 160 max player slots instead of 80, as it's counting the max player slots of both servers. 
+* Displaying if the server is online. Returns true if online, returns false if not. 
+
+* Displaying if the server is in maintenance mode. Returns true if online, returns false if not.
+
+* Displays server IP.
+
+* Displays Server port (The port is automatically checked from the server.properties server-port option.)
+
+* Server Alias: Currently, this only includes the server name. We may make this with some use soon.
+
+* ServerName: The server name it displays in.
+
+## NOTE
+- When using boolean to return true or false, MySQL has it differently, so they're known as "TinyInt". Essentially, it's a 0 or 1 number (0 for false, 1 for true). It converts a boolean into a tinyint (AKA either 0 or 1)
+
+- We've completely revamped some Network::class API's.
+- 
+- Network::getServerName() no longer relies on the server's MOTD. It'll return the actual name of the server. This is so we can add our own MOTD.
+
+CURRENT KNOWN ISSUES WITH THIS UPDATE
+- Sometimes the Maintenance mode would be set to true or false, even if it's not whitelisted. This would only occur when you're using the command from another server after that specific server is being whitelisted/unwhitelisted.
