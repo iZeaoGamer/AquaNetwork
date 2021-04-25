@@ -220,3 +220,24 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 ## CURRENT KNOWN ISSUES WITH THIS UPDATE
 - Sometimes the Maintenance mode would be set to true or false, even if it's not whitelisted. This would only occur when you're using the command from another server after that specific server is being whitelisted/unwhitelisted.
+
+- We've completely rewritten how island generation deletes an island after using /is restart.
+
+- /is restart now makes your island brand new, and deletes the old island. Before, it just kept it there like nothing happened. 
+
+- Fixed some commands not working as intended. The fix, was to use ./ instead of /, but this should now be fixed.
+
+- Disable Network Core if server name and ip is invalid.
+- Added new feature: Envoys.
+
+## How does envoys work?
+* Envoys, are chests that randomly spawn through out your world. Because we're that unique, we've decided Envoys are going to spawn in the same world as the islands are in.
+* We may also plan on making a lot of big changes to Envoys in the near future.
+- Added command: /envoys - With this command, you can track down each envoy and their positioning, using Coordinates.
+
+- Timer for Envoys till despawn is now 15 minutes.
+- Fixed spawners from not clearing and deleting whilst a player uses /is restart during the process.
+
+- Floating texts from spawners also now delete, instead of appearing still.
+
+- Fixed the aftermath of /is restart not regenerating the new island properly.
