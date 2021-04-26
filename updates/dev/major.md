@@ -168,13 +168,14 @@ You can also use Activity points in /f shop, where you can buy certain items wit
 
 - We've made bans and mutes slightly better!
 
-How they work?
+## How they work?
 - You can use the command: /ban <player> <type> <time> <reason>
 
-<type> is the type of ban/mute you'd like to use. Valid ones are: temp and perm. If using perm, you only use /ban <player> perm <reason>. If using temp, you can use /ban <player> temp <time> <reason>.
-<time> - You can use time formats like d, m, s, etc. d means Day, m means minutes, and s means seconds. We also have premade timers for you, so if you want to ban or mute someone, you can use the valid reasons, as described in /ban or /mute usage.
+[type] is the type of ban/mute you'd like to use. Valid ones are: temp and perm. If using perm, you only use /ban <player> perm [reason]. If using temp, you can use /ban [player> temp <time] [reason]
 
-<reason> - Just put a reason for the punishment. It needs to be valid, or it won't go anywhere, and we'd simply unban/unmute them.
+[time] - You can use time formats like d, m, s, etc. d means Day, m means minutes, and s means seconds. We also have premade timers for you, so if you want to ban or mute someone, you can use the valid reasons, as described in /ban or /mute usage.
+
+[reason] - Just put a reason for the punishment. It needs to be valid, or it won't go anywhere, and we'd simply unban/unmute them.
 
 - Fixed ban messages from displaying incorrectly.
 
