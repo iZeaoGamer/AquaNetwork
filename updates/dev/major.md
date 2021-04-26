@@ -242,3 +242,31 @@ the database will recognize this, and display 160 max player slots instead of 80
 - Floating texts from spawners also now delete, instead of appearing still.
 
 - Fixed the aftermath of /is restart not regenerating the new island properly.
+
+- Completely cleaned-up a bunch of junk with commands being in the wrong classes.
+
+- Most command's autofill should now be fixed. Issues with this would be things like commands appearing even if you don't have permission to use it.
+
+- Made a new folder: Moderation, which has all the moderation commands for staff.
+
+- We've completely moved all of the moderation commands to essential\command\types\moderation, and moved a few older moderation commands to that folder also.
+
+- Fixed /spectate command from breaking, and didn't output the correct command usages.
+
+- Check if the server is online when transferring a player to a specific server. If it returns true, it'll skip that check. If it returns false, it'll give you an error message.
+
+- Check if the server is whitelisted when transferring a player to a specific server. If it returns true, it'll skip that check. If it returns false, it'll give you an error message.
+
+- Added the new and updated WaterDog support for Transferring servers. It'll use the $player->transfer() method, whether you use waterdog or not, it'll still use the same transfer method. If you're using Waterdog, then the Transfer function will go to waterdog's transferring method. This change is useful so we don't have to change anything majorly when switching to a proxy. 
+
+- Added new command: /transfer - This command will allow you to transfer to any of our servers within the network. 
+
+- Fixed users not being transferred properly, and getting the "Disconnected from server" bug during its restart.
+
+- Cleaned-up useless parmaters for BuildMode Command, and made it work like the other commands.
+
+- Fixed crash when transferring to a server they're banned from.
+
+- Fixed crash when transferring to a server they're not whitelisted on.
+
+- Fixed a crash when transferring to a server that is not online.
