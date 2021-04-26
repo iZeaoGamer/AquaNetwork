@@ -243,7 +243,7 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 - Fixed the aftermath of /is restart not regenerating the new island properly.
 
-- Completely cleaned-up a bunch of junk with commands being in the wrong classes.
+- Completely cleaned-up a bunch of junk with commands being in the wrong classes and folders.
 
 - Most command's autofill should now be fixed. Issues with this would be things like commands appearing even if you don't have permission to use it.
 
@@ -257,7 +257,7 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 - Check if the server is whitelisted when transferring a player to a specific server. If it returns true, it'll skip that check. If it returns false, it'll give you an error message.
 
-- Added the new and updated WaterDog support for Transferring servers. It'll use the $player->transfer() method, whether you use waterdog or not, it'll still use the same transfer method. If you're using Waterdog, then the Transfer function will go to waterdog's transferring method. This change is useful so we don't have to change anything majorly when switching to a proxy. 
+- Added the new and updated WaterDog support for Transferring servers. It'll use the $player->transfer() method, whether you use waterdog or not, it'll still use the same transfer method. If you're using Waterdog, then the Transfer function will go to waterdog's transferring method. This change is useful so we don't have to change anything majorly when switching to a proxy in the future. 
 
 - Added new command: /transfer - This command will allow you to transfer to any of our servers within the network. 
 
