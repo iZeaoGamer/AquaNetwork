@@ -270,3 +270,13 @@ the database will recognize this, and display 160 max player slots instead of 80
 - Fixed crash when transferring to a server they're not whitelisted on.
 
 - Fixed a crash when transferring to a server that is not online.
+
+- Exploding a spawner will now always drop the spawner that had been exploded to, rather than only sometimes occurring.
+
+- Fixed Floating text from Spawners causing issues with it not disappearing when it explodes.
+
+- Fixed an issue where spawner levels would reset. This update prevents this from happening.
+
+- Fireworks now launch above the Envoy chest. This is useful for knowing around where it is.
+
+- Added custom names and lores for spawners.
