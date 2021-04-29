@@ -358,8 +358,8 @@ the database will recognize this, and display 160 max player slots instead of 80
 * Network::isLobby() -> Network::isLobby() - Returns bool instead of string.
 
 - Addded the following new API Methods:
-Network::getTotalPlayers() - Totals all of the players online function, combined.
-Network::readURL() - Reads the link from the URL, can be used for file transfer purposes, code sided.
+* Network::getTotalPlayers() - Totals all of the players online function, combined.
+* Network::readURL() - Reads the link from the URL, can be used for file transfer purposes, code sided.
 
 - Network::isInstalledPlugin() now returns Network::getPluginName(). The difference with Network::isInstalledPlugin(),
 * is it checks whether the plugin is null (whether it's installed or not).
