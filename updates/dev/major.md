@@ -332,8 +332,8 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 ## What are the difference between DiverseBossBar, and Normal BossBar?
 
-* DiverseBossBar: Sends data per player.
-* BossBar: Sends data to available players online.
+* DiverseBossBar: Sends different data per player.
+* BossBar: Sends the same data per player.
 
 - Removed Network::isGamemode() API function because it will now always return true, so the best option is to remove it entirely.
 - Removed the following API Methods:
