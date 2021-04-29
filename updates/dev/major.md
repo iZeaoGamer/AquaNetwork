@@ -1,5 +1,7 @@
 ## VirtualPE Development updates:
 
+## This changelog introduces a new and complete Core revamp, along with: Major API changes (API BC), and many changes with the concurrent server.
+
 - Start work on SkyFactions (Our first mixed gamemode), between Factions and SkyBlock.
 - Added a very unique way of raiding: Cores. (Info at #👀・sneakpeaks.)
 
@@ -280,3 +282,102 @@ the database will recognize this, and display 160 max player slots instead of 80
 - Fireworks now launch above the Envoy chest. This is useful for knowing around where it is.
 
 - Added custom names and lores for spawners.
+
+- Fixed client crash when using /is restart command.
+
+- Added /tags - Allows you to open a UI, where you can select your tag (depending on if you own the tag).
+
+- Envoys has been extended, in terms with functionality.
+
+- Fixed an issue, where envoys would only spawn if a user is online.
+
+- Added a brand new Envoy island, finally! Yay.
+
+- Fixed server crashes when chest tiles were spawned in areas where chunks weren't loaded. This is a hacky fix, and should be for the duration.
+
+- Added a brand new feature called "Envoys platforms". 
+- 
+## How does it work?
+* This feature allows the server to spawn a platform below where the envoys are.
+* This is so items that try to fall into the void will be saved for 10 seconds.
+* You would then need to get the items from the envoy that were on the platform within 10 seconds, otherwise
+* it'll disappear. This is useful for if you don't want to place blocks around the envoy island, as it'll place it for you.
+- Added a boss bar timer to Envoy platforms counting down from 10 to zero, which then will despawn.
+
+- Fixed Boss bar percentage from always being 100%. Now, it goes down from 10 to zero.
+* The reason why this bug occurred, was because with Boss bar percentage,
+* Percentages work by making the percentage (1-100), and then dividing it by 100.
+* For example, 50 percent would be 0.5, 100 percent would be 1, etc.
+
+- Reduced the platform size to reduce lag.
+
+- Added new command: /flyshop.
+
+## How it works?
+* You can actually buy fly time. Fly time, is a temporary solution, where you can increase your fly limitation.
+* Using the command /flyshop, you can buy fly time, as stated in the FlyShop UI.
+* When activated, it'll state how long your flight time will be.
+* Keep in mind - You can add onto another set amount of fly time minutes.
+* For example, if you already have 5 minutes as your fly time, you can add onto another 10 minutes, which would be 15.
+- Vanished player's /fly will no longer disable when fly time is over. Flight will be disabled if the user isn't vanished.
+* Great for moderation purposes.
+
+- Added updated Factions support for Ranks and chatting.
+
+- Removed health and max health status to the Tip message. This is because it was clogging up general uses,
+* and we can't have that.
+
+- Added API methoding for Bossbars. Using Network::getDiverseBossBar(), and Network::getBossBar() API methods.
+* Another way to obtain them is by using DiverseBossBar::get() and BossBar::get().
+
+What are the difference between DiverseBossBar, and Normal BossBar?
+DiverseBossBar: Sends data per player.
+BossBar: Sends data to available players online.
+
+- Removed Network::isGamemode() API function because it will now always return true, so the best option is to remove it entirely.
+- Removed the following API Methods:
+* Network::onEnchant()
+* Network::isEnchantmentServer()
+* Network::isGamemode()
+* Network::updateScoreboard()
+* UpdateManager::updatePublicScoreboard()
+* Network::timeToSeconds()
+* Network::isScoreboard()
+* Core::isLobby()
+* Core::loadInventories()
+* Core::addInventory()
+* Core::isLimbo()
+* Core::getInventories()
+
+- Renamed the following API Methods:
+* Network::number_format_short() -> Network::shortNumber(), and improved the function.
+* Network::calctime() -> Network::getFullTime()
+* Network::timeFormat() -> Network::getFullTime()
+* Network::timeToSeconds() -> Network::getFullTime()
+* Network::isLobby() -> Network::isLobby() - Returns bool instead of string.
+
+- Addded the following new API MEthods:
+Network::getTotalPlayers() - Retrieves the total amount of players online, including vanished, staff members, socialspy players, idle players, afk players, online players, all combined.
+Network::readURL() - Reads the link from the URL, can be used for file transfer purposes, code sided.
+
+- Network::isInstalledPlugin() now returns Network::getPluginName(). The difference with Network::isInstalledPlugin(),
+* is it checks whether the plugin is null (whether it's installed or not).
+
+- Made Network::isLobby() return a string parmeter, rather than returning the server name.
+
+- Added those with Server::getInstance() to be Network::getCurrentServer() for API flexability.
+
+- Made Network::isEventServer() return a string parmeter, rather than returning the server name.
+
+- Fixed Network::getOnlinePlayersWith() returning a Player::class objective from not being found due to a typo.
+
+- Network::isLobby() now returns the Server::isLobby() instance.
+- Fixed crash when respawning.
+
+- Increased world border size to 20kx20k
+
+- When at the end of the border, it'll now teleport you to your island (if you have one).
+
+- When at the end of the border, it'll now teleport you to the same Y Coordinate, but different X and Z coordinates.
+
+- Fixed an issue, where players couldn't fly whilst in creative mode.
