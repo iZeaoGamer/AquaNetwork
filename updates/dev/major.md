@@ -330,9 +330,10 @@ the database will recognize this, and display 160 max player slots instead of 80
 - Added API methoding for Bossbars. Using Network::getDiverseBossBar(), and Network::getBossBar() API methods.
 * Another way to obtain them is by using DiverseBossBar::get() and BossBar::get().
 
-What are the difference between DiverseBossBar, and Normal BossBar?
-DiverseBossBar: Sends data per player.
-BossBar: Sends data to available players online.
+## What are the difference between DiverseBossBar, and Normal BossBar?
+
+* DiverseBossBar: Sends data per player.
+* BossBar: Sends data to available players online.
 
 - Removed Network::isGamemode() API function because it will now always return true, so the best option is to remove it entirely.
 - Removed the following API Methods:
@@ -356,8 +357,8 @@ BossBar: Sends data to available players online.
 * Network::timeToSeconds() -> Network::getFullTime()
 * Network::isLobby() -> Network::isLobby() - Returns bool instead of string.
 
-- Addded the following new API MEthods:
-Network::getTotalPlayers() - Retrieves the total amount of players online, including vanished, staff members, socialspy players, idle players, afk players, online players, all combined.
+- Addded the following new API Methods:
+Network::getTotalPlayers() - Totals all of the players online function, combined.
 Network::readURL() - Reads the link from the URL, can be used for file transfer purposes, code sided.
 
 - Network::isInstalledPlugin() now returns Network::getPluginName(). The difference with Network::isInstalledPlugin(),
@@ -372,6 +373,7 @@ Network::readURL() - Reads the link from the URL, can be used for file transfer 
 - Fixed Network::getOnlinePlayersWith() returning a Player::class objective from not being found due to a typo.
 
 - Network::isLobby() now returns the Server::isLobby() instance.
+
 - Fixed crash when respawning.
 
 - Increased world border size to 20kx20k
