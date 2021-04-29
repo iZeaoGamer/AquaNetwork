@@ -378,6 +378,7 @@ Network::readURL() - Reads the link from the URL, can be used for file transfer 
 
 - When at the end of the border, it'll now teleport you to your island (if you have one).
 
-- When at the end of the border, it'll now teleport you to the same Y Coordinate, but different X and Z coordinates.
+- When at the end of the border, it'll now teleport you to the same Y Coordinate, but different X and Z coordinates. (If you don't have an island)
 
 - Fixed an issue, where players couldn't fly whilst in creative mode.
+
