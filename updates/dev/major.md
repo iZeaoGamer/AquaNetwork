@@ -384,3 +384,38 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 - Fixed an issue, where players couldn't fly whilst in creative mode.
 
+- When in combat, a stone block will spawn below your feet if on the 25 Y Coordinate.
+
+- Fixed being able to upgrade spawners that aren't even yours.
+
+- You can now only use /is restart if you're the only one on your island.
+
+- Island Protection now relies and supports higher island sizes, leading to more protection depending on island size.
+
+- We've updated our staff mode system.
+
+## HOW IT WORKS?
+* Staff mode, is a moderation feature. We've updated it masssively.
+
+* Added an experiemental feature: Replay Mode. How it works:
+
+** You can now record other players and entities, play back the recording, and save a recording. All in just staff mode.
+
+* Because we have too much items in one inventory space, we've decided to now introduce Pages.
+
+* There are 3 items per page. Papers are pages, and you can go through them all in just over a page. Either click Next page
+
+* to go to the next page number, or previous page item to go to the previous page number
+- Fixed not being able to open chests after you've destroyed the core.
+
+- You can now craft a working shield!
+
+- You can now use the enchantment table to buy Vanilla enchantments using lapis, as you would normally in vanilla.
+
+* We will be making vanilla enchantments hard to get. The only way you can get it, is from an enchantment table, and we will make ways of getting things like enchantment table, etc soon.
+
+- You can now use the anvil to repair your items!
+- Fixed crash when upgrading your island size.
+
+- Fixed trees not being able to be broken because the core was too close to it. It'll now allow you to break leaves and logs no matter how close it is to the core.
+Keep in mind - Placing logs and leaves near the core will not allow you to - This is to prevent abuse.
