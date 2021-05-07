@@ -466,7 +466,7 @@ Keep in mind - Placing logs and leaves near the core will not allow you to - Thi
 
 * It releases the player as soon as the island generates. This takes from 1-3 seconds to generate. And before,
 
-* players were released from their position as soon as the island generated. Now, it'll release after 3 seconds of island regeneration
+* players were released from their position as soon as the island generated. Now, the player will be released from their current position after 3 seconds of island regeneration
 
 * to prevent any entity colliding with blocks issue.
 
