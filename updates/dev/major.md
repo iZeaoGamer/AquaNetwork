@@ -419,3 +419,61 @@ the database will recognize this, and display 160 max player slots instead of 80
 
 - Fixed trees not being able to be broken because the core was too close to it. It'll now allow you to break leaves and logs no matter how close it is to the core.
 Keep in mind - Placing logs and leaves near the core will not allow you to - This is to prevent abuse.
+
+- We've made a few changes relating to the core, and how it destroys.
+
+- The core destroy sound will now always occur whenever you break a core. Before, it'd only make the sound effect when the core's player is online.
+
+- The server will now broadcast whenever a core has been destroyed.
+
+- Added offline support for retrieving the player's name from the core objective, which then can be used for destroyal messages.
+
+- Made a ton of improvements and implementations to how /is visit will work.
+
+## How it works?
+* Whenever you type /is visit <player>, you will be known to not being able to break blocks, place blocks, interact with anything, destroy the core, attack entities and players, and add buckets to the island.
+* This is logical behavior. Once you either get teleported to spawn, or teleport to your island, visitor mode will be disabled.
+* During the visitor mode being enabled, you won't be able to turn on coordinates using /xyz on. The visitor mode is very limited, to prevent abuse.
+
+- Renamed command: /is lock -> /is private.
+
+- Messages for /is private on has been changed.
+
+- Messages for /is private off has been changed.
+
+- An warning message will be issued to you upon using /is private off, so you know what risks are involved when making your island public.
+- Fixed having to chat 3 times before you're able to speak. It's now 2 tries. One which will be the message to type again, and the other, you will be able to talk.
+
+- Fixed /is restart from being able to delete other people's islands.
+
+- You can only use /is restart when on your island. If you use it on islands that aren't yours, or not in a valid island world, a error message will popup, in chat context. Stating you can't use this command here.
+
+- Added new command: /is help
+
+- Fixed crash when only inputting /is help.
+
+- You can now use /is to bring the /is help usage. More easier and better understanding than it was previously.
+
+- Leaving the server whilst visitor mode is turned on will now teleport you to spawn before it counts you as left the server.
+
+- Server restarts whilst visitor mode is turned on for player(s) will now teleport them to spawn before it counts the server as disabled.
+
+- Fixed Visitor mode being disabled when you go into the void on another user's island.
+
+- Fixed players being able to attack visitors.
+
+- Fixed bug, where you'd sometimes go inside blocks upon island generation. The reason for this cause is because
+
+* It releases the player as soon as the island generates. This takes from 1-3 seconds to generate. And before,
+
+* players were released from their position as soon as the island generated. Now, it'll release after 3 seconds of island regeneration
+
+* to prevent any entity colliding with blocks issue.
+
+- Fixed /is restart relying on the Last X and Last Z, so if the last player created their island using /is create, and another
+
+* player uses /is restart, it'd clear the last player's island that used /is create or /is restart on.
+
+* Now, it relies on the specific sender's X and Z coordinates within the spawn positioning.
+
+- Fixed some parts of the island not deleting properly when using /is restart.
