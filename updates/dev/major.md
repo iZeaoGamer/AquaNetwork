@@ -505,7 +505,7 @@ Keep in mind - Placing logs and leaves near the core will not allow you to - Thi
 
 - Updated Fuel message to make it more realistic.
 
-- Added our very on Cooldown API (Also publicly available too)
+- Added our very own Cooldown API (Also publicly available too)
 
 - Added the following API Methods:
 
@@ -519,7 +519,7 @@ Keep in mind - Placing logs and leaves near the core will not allow you to - Thi
 
 - Fixed not being able to place blocks.
 
-- Added brand new: Raiding Minion. 
+- Added brand new minion: Raiding Minion. 
 
 ## What does this minion do?
 * This minion is a raiding minion, allowing you to break blocks in a certain radius,
