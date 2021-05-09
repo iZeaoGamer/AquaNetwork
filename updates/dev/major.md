@@ -544,8 +544,11 @@ A raiding minion has 3 different Levels. The higher the further!
 * Level 2 - 18 Blocks for 60 Essences
 * Level 3 - 21 Blocks for 90 Essences
 
+## What happens after raiding the base?
 - Well, they simply break. They do not disappear, no you can pick their Pieces up! Essences and iron blocks!
 
+
+## What does this minion drop?
 You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 
