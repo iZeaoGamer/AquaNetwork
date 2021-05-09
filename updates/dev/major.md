@@ -538,10 +538,11 @@ The minion cannot break any blocks assigned to the core, neither any chest or th
 
 ## Blocks and Levels
 A raiding minion has 3 different Levels. The higher the further!
-How far tho?
-Level 1 - 15 Blocks for 30 Essences
-Level 2 - 18 Blocks for 60 Essences
-Level 3 - 21 Blocks for 90 Essences
+
+## How far tho?
+* Level 1 - 15 Blocks for 30 Essences
+* Level 2 - 18 Blocks for 60 Essences
+* Level 3 - 21 Blocks for 90 Essences
 
 - Well, they simply break. They do not disappear, no you can pick their Pieces up! Essences and iron blocks!
 
