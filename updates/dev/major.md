@@ -477,3 +477,77 @@ Keep in mind - Placing logs and leaves near the core will not allow you to - Thi
 * Now, it relies on the specific sender's X and Z coordinates within the spawn positioning.
 
 - Fixed some parts of the island not deleting properly when using /is restart.
+
+- You can no longer interact with enchantment tables whilst in visitor mode or if the core hasn't been broken yet.
+
+- Removed Less click interaction spammy messages.
+
+- You can no longer bypass being frozen by using /is restart.
+
+- Added Freeze Support to /is restart releasing the player.
+
+- Completely changed SkyBlock Commands messages to make them look better, instead of the plain white text.
+
+- Fixed /is kick from giving an error to the player that got kicked from the island.
+
+- Added a new display system: Fuel.
+
+## How does Fuels work?
+* It's nothing too exciting, except it's a way of knowing the fly time. Though we did have this before, we never gave it a name.
+
+* Once the fuel get's low (1 minute before expiry), it will state you're running out of fuel.
+
+- Renamed command: /flytime -> /fuel.
+
+- Updated Fuel Form UI to be more specific about what fuel is in the server's case.
+
+- Make villager sound when you're low on fuel!
+
+- Updated Fuel message to make it more realistic.
+
+- Added our very on Cooldown API (Also publicly available too)
+
+- Added the following API Methods:
+
+* Network::isCooldownActive(): Checks if the cooldown for the given player is active. Returns true if active, returns false if not.
+
+* Network::hasCooldownTime(): Checks if the time set is over. Along with this, you can set a timer for the given player.
+
+* Network::canUseItem(): Checks if the item can be used to interact.
+
+* Network::setCooldownTime(): Resets the cooldown timer.
+
+- Fixed not being able to place blocks.
+
+- Added brand new: Raiding Minion. 
+
+## What does this minion do?
+* This minion is a raiding minion, allowing you to break blocks in a certain radius,
+
+* which can be used to break into somebody's base. Maybe if they have an complete obsidian base, or something that's pretty OP, and can't be raided with anything.
+
+* This is where the Raiding minion comes in. You activate it, and watch it start destroying the wall from the base.
+
+- Raiding Minion no longer breaks things like chests, which would then be lootable.
+
+## HOW IT WORKS?
+There's 3 different levels of the Raiding minion.
+
+It's a minion or entity you can place which breaks a certain amount of blocks in a certain direction.
+The minion cannot break any blocks assigned to the core, neither any chest or things that can be looted. You cannot loot as theres still the protection of the core.
+
+## Blocks and Levels
+A raiding minion has 3 different Levels. The higher the further!
+How far tho?
+Level 1 - 15 Blocks for 30 Essences
+Level 2 - 18 Blocks for 60 Essences
+Level 3 - 21 Blocks for 90 Essences
+
+- Well, they simply break. They do not disappear, no you can pick their Pieces up! Essences and iron blocks!
+
+You can obtain 2 Essences and 5 Iron blocks from them dropping!
+
+
+## How do you obtain them?
+
+- You can craft it using iron blocks and essences, which will come hopefully in the next update!
