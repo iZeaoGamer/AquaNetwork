@@ -555,3 +555,67 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 ## How do you obtain them?
 
 - You can craft it using iron blocks and essences, which will come hopefully in the next update!
+
+- When the raiding minion activates, everyone that is in your island, that is online, and the island they're trying to target, will be alerted that they're being raided, and to warn those involved.
+
+- Fixed being able to break blocks outside of the island border.
+
+- Fixed being able to place blocks outside of the island border.
+
+- Fixed being able to interact with items/blocks outside of the island border.
+
+- Fixed being able to place buckets (Water + Lava) outside of the island border.
+
+- You can no longer place raiding minions in islands you're apart of.
+
+- You can no longer place raiding minions if you're not in any of the player island's.
+
+- Added new command: /f description - Allows you to set a description of your island.
+- Added Island titles support.
+
+## How it works?
+
+* So there are two types of titles?
+
+1. Island Title
+* So when you're nearer to an island, it'll state what the island is called, and the description of the island you're going towards.
+
+2. Wild Title
+* When you're out of the island's border, it'll state you're in the wildness.
+- Added Groovy bot to the discord server, thanks @Bubbly for this!
+
+- You now teleport to the server spawn if you fall into the void, and in the wildness.
+
+- Changed up how teleportation cooldown works.
+
+- We're now using: Network::getFullTime() for seconds, rather than using its own timer for things like /spawn
+
+- Removed useless imports.
+- Added new class: CoreInfo. This class will be the main course of information, provided to the plugin for either future use or something that's already being used.
+* CoreInfo can be used for future things (Like VirtualPE update versions, and what the next version will be.
+
+- Saperated all moderation related stuff, and made it a saperate listener class.
+
+- Saperated all Networking related stuff, and made it a saperate listener class.
+
+- Added Anti Auto Clicker. Instead of it actually kicking, or banning you, it'll just send out a message to all staff members.
+
+- Added new command: /changelog
+
+- All changes will now be directed via /changelog, directly in-game. We may post some updates on discord also.
+
+- The console username now outputs as Auto Detector, in case of any future anti-cheats that provide custom banning system.
+
+- Fixed being frozen whilst you are leaving the server from giving you an error.
+
+- Updated Frozen's ban system.
+
+- Leaving after you were frozen now bans you for 7 days, and not permanently.
+
+- We've finally added our own Updating system.
+
+## HOW IT WORKS?
+* When a new version releases, it'll state this when you first join. Essentially like any other auto updaters, except it isn't deemed as an updater.
+* It's basically an updater for the /changelog command. Once a new version releases, it'll state all the information you need, and will give you a book.
+* Once you either type /changelog or tap the book on the ground, it'll set your state to "Read latest changes", which will then display There is no new updates available upon next join.
+* Because we have a new class: CoreInfo, this makes it so we can update the versions ourselves, without dealing with configuration mess, and less customizability as to what I can do.
