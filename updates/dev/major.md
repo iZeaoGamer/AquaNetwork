@@ -570,7 +570,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - You can no longer place raiding minions if you're not in any of the player island's.
 
-- Added new command: /f description - Allows you to set a description of your island.
+- Added new command: /is description - Allows you to set a description of your island.
 - Added Island titles support.
 
 ## How it works?
