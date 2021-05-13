@@ -619,3 +619,85 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 * It's basically an updater for the /changelog command. Once a new version releases, it'll state all the information you need, and will give you a book.
 * Once you either type /changelog or tap the book on the ground, it'll set your state to "Read latest changes", which will then display There is no new updates available upon next join.
 * Because we have a new class: CoreInfo, this makes it so we can update the versions ourselves, without dealing with configuration mess, and less customizability as to what I can do.
+
+- Fixed Chest from going in an incorrect direction upon placed whilst in vanish.
+
+- Vanish chests are now trapped chests, instead of normal chests. This fix was made to prevent conflictions.
+
+- Vanish chests now go in the correct direction.
+
+- We've added more items support to Vanish chests.
+
+- You can no longer break normal chests whilst in vanish, to prevent abuse.
+
+- Fixed crash when joining the server if the database is offline.
+
+- Added even more Database offline support for player joins/leave, comparing versions, and more.
+
+- We've introduced a brand new Discord system called "VirtualPE Game Side". Well, that's the category name atleast.
+
+## How does this work?
+* So we have a new channel on discord called: #💻・console
+* In this channel, we have everything, to storing errors (Not an error message, but an error information that occurred),
+* Storing player joins/leaves, staff and player commands, broadcast messages, made from the server to discord,
+* Server restart time, and basically anything that logs the server.
+* This is more useful for us higherups so we can determine what is going on without actually going on the server.
+
+## API Logics with this
+* Well, thanks to our Networking::class, we can broadcast a public message, use Server::getInstance() for broadcasted messages, and we can make it so it logs to discord.
+* By using Network::broadcastMessage().
+
+- Fixed color coding font issues from discord's side - Upon join/leave.
+
+- Fixed crashes when opening a vanish chest. This was because some items were causing crashing difficulties, either because it's unknown or isn't yet implemented into pocketmine yet.
+
+- Delay each onEnable() state message.
+
+- Delay each onDisable state message.
+
+## Why did you do this?
+* I did this because before, onEnable() and onDisable() state would randomize each message in a random order. We use sleep(1) upon onEnable() and onDisable() inbetween log messages so it can send out in the correct order.
+* You could say this is a type of code hack to prevent messages being randomized, when sometimes it wouldn't make a lot of sense.
+
+- Fixed duplicated chat messages, made in #💻・console.
+
+- We've removed the following channels in VirtualPE discord server:
+* #🗣・ingame-chat, #🚔・ingame-staffchat, #⚕・staff-commands, and 🤖・player-commands.
+
+- We've renamed the following channels in VirtualPE Discord server:
+
+* #👀・last-seen -> #👀・staff-activity
+
+- We've made some improvements to how a user chats, and uses command.
+* Because we've removed a ton of channels that weren't needed, I've decided to implement a way to display if the user is using staff chat or not, same goes for commands (In terms with if they're using socialspy or not.)
+* That way, it's a lot easier to over see the situation and chats.
+
+- We've renamed the following chat messages sections/titles.
+
+* Last-seen -> Last Active.
+
+- We've also made improvements to #👀・staff-activity. Here are the following things that were improved on:
+* Instead of appearing as 0 seconds, it'll now state that they just logged on/off. This is to prevent many confusions. Thanks to @TableFungi#5578 for bringing this to my attention!
+
+- Fixed an issue, where the server would take a few seconds to actually kick all online players from the server.
+
+- Added Death, and respawn messages to Discord logging.
+
+- Added color coded death messages for in-game!
+
+- Added a new function: Network::removeCode().
+
+* This function will delete any color coding material. How this works, is:
+
+* If the & symbol is used for color coding, it'll convert that to an § symbol, which will then clean any § symboled message using TextFormat::clean, which basically deletes any sort of coding material with an § symbol.
+* We do it this way because it doesn't detect &, so we have to do that ourselves.
+
+- Fixed /burn command from giving you an error if the database is offline.
+
+- Added Envoys Status, which will display how many envoys have been spawned, which updates every 6 minutes. (Discord side only)
+
+- Added new Discord embed titles for anything that's not related to Sender sending the broadcast message.
+
+- Fixed a /burn permission bug issue if the user was opped.
+
+- Fixed players being able to use /burn if they don't have permissions.
