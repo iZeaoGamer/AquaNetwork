@@ -649,7 +649,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Fixed color coding font issues from discord's side - Upon join/leave.
 
-- Fixed crashes when opening a vanish chest. This was because some items were causing crashing difficulties, either because it's unknown or isn't yet implemented into pocketmine yet.
+- Fixed crashes when opening a vanish chest. This was because some items were causing crashing difficulties, either because it's unknown or isn't yet implemented into pocketmine.
 
 - Delay each onEnable() state message.
 
