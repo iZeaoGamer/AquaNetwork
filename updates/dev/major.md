@@ -701,3 +701,72 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 - Fixed a /burn permission bug issue if the user was opped.
 
 - Fixed players being able to use /burn if they don't have permissions.
+
+- Fixed envoy island not spawning in the chest properly.
+
+- Fixed not being able to break all envoy surrounding blocks.
+
+- Fixed being able to break and place blocks in an area where there isn't an island found.
+
+- Fixed placing spawners to make them stack from not updating the Spawn timer. Before, you'd have to wait until the timer was set to zero, which would then update.
+
+- Fixed duplicated floating texts with spawners.
+
+- Increased default spawner time to 5 minutes.
+
+- Fixed breaking spawners when you're in visitor mode or do not have access to an island, the floating text would disappear for a second.
+* This has since been fixed.
+
+- Removed the WorldBorder.
+
+## Why did you remove the Worldborder?
+* We removed the World Border because of how easy it could've been to collide with another island's coordinates.
+* We removed World Border to ensure coordinates are from 0 to 500k from X and Z. That way, it'll be a lot less conflicts between Island coordinates, and random X and Z coordinate.
+
+- Island creation/Restart now goes out from 0 to 500k X and/or Z.
+
+- Fixed error upon onDisable() with Saving the Server Management side via MySQL.
+
+- ServerManager now saves if the database was online at that given time. This is to prevent errors.
+
+- Fixed conflictions between the same spawners if not stacked. 
+* Before, whenever you place a spawner down, it'd show the same Spawner level, alongside the cost as the previous placed spawner.
+* This would then only occur whenever you have one of the same spawners, but in different stack.
+* Now, it'll use Random() ids within the spawners, as an NBT Tag to prevent colliding between same spawners.
+
+- Fixed crash when placing a spawner.
+
+- Fixed place of spawner from delaying the floating text addition to the player. Now, it'll do it instantly.
+
+- Fixed bug, where you could stack spawners in islands that aren't yours or apart of.
+
+- Envoys now have a timer of 30 minutes.
+
+- The server now spawn 15 envoys at once, every 30 minutes.
+
+- We've reverted the change where spawner levels would save when you break them.
+
+## Why did you make this change?
+* Because it would've been buggy, and more bugs could occur with this being enabled.
+
+* Things like: Conflictions could also take place, in which I'd rather not have, for abuse reasons.
+
+- Fixed crash when you use /is create - Because coordinates were too far.
+
+- Envoys now stretch out further coordinates, same applies for Islands now.
+
+## Why did you make this change?
+* Because as I've explained regarding world borders, it's too easy to collide between Island coordinates, and because /is create/restart now stretch out further due to the collide with coordinates issue.
+* If we are going to stretch out island coordinates, then might as well stretch Envoy coordinates.
+
+- Finally: Fixed Island coordinates from colliding, rarely, but could still occur.
+
+* Now, it's virtually impossible to have an island collide with a newly created island, because with 0 - 19k, there was hardly a way of colliding new islands and old islands.
+* Now, it's like impossible to collide between newly created islands and other islands because from 0 - 500k, it's like impossible to make them the same.
+* Essentially like IDS - You can make an ID from 0 to 500k, but they will very unlikely be the same, because of how far it goes.
+
+- Added a brand new VPN Protection system.
+
+- Removed Dead Webhooks that no longer exist.
+
+- Added CrossBow Item to the server
