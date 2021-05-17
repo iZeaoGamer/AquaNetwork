@@ -795,8 +795,8 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 ## What is the difference between /is kick and /is remove?
 
-* /is kick, kicks players that are on your island at that time.
-* /is remove removes membership from your island, meaning they won't be able to cooperate with the island, and will be in visitor mode when they next teleport to your island.
+* /is kick - kicks players that are on your island at that time.
+* /is remove - removes membership from your island, meaning they won't be able to cooperate with the island, and will be in visitor mode when they next teleport to your island.
 
 - It'll now state if you tried to kick yourself from your own island.
 
@@ -867,8 +867,8 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 * Yes, we have made this as simple as possible to make it way less confusing than it was previously.
 
 ## New Commands added
-* /warn <player> <reason> - Warn another user for the given reason.
-* /unwarn <player> - Unwarns another user.
+* /warn [player] [reason] - Warn another user for the given reason.
+* /unwarn [player] - Unwarns another user.
 
 - We've made a ton of changes to how warning works.
 
@@ -879,7 +879,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 * If the warning points is 3 or above, it'll automatically mute the given player with the reason: "Warned 3+ times", and it'll delete the given warn, so they start over from zero.
 * We make this a mute because you really only get warned if it's a chat offense, so this wouldn't make sense if it banned you for something that's not bannable, but rather muteable.
 * This makes staff's jobs 10x easier as they wouldn't have to mute the player if they're already muted.
-* It'll mute the given player for 6 hours within that reason. If you want to edit that time, you can remute them by using /mute <player> temp <time> <reason>
+* It'll mute the given player for 6 hours within that reason. If you want to edit that time, you can remute them by using /mute [player] temp [time] [reason]
 
 - We've done a lot of core backends to ensure the server has no issues. This includes:
 
