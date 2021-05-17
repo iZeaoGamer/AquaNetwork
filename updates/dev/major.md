@@ -945,7 +945,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Koth Capture points now reset if you're not on the Capture stand.
 
-## 0Why did you make this change?
+## Why did you make this change?
 * We made this change to prevent any sort of abuse, and making the game easier.
 
 - Fixed crash upon respawn().
