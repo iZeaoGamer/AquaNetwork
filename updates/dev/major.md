@@ -775,7 +775,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Upon island creation, it'll now check if an island is already created at that location.
 
-**How does this work?**
+## How does this work?
 * Well, thanks to our SkyBlock::class API, we can check if the specific coordinates is at a specific island.
 * If it is, it'll return true, and teleport you to another location. If it isn't at an island, it won't teleport you any further. Returns false if not found.
 
@@ -793,7 +793,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - You can now kick more than one player from your island. Example: Use /is kick iWin10PlayzMC ZeaoPlayzMC to kick the players: iWin10PlayzMC, and ZeaoPlayzMC.
 
-**What is the difference between /is kick and /is remove?**
+## What is the difference between /is kick and /is remove?
 
 * /is kick, kicks players that are on your island at that time.
 * /is remove removes membership from your island, meaning they won't be able to cooperate with the island, and will be in visitor mode when they next teleport to your island.
@@ -945,7 +945,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Koth Capture points now reset if you're not on the Capture stand.
 
-**Why did you make this change?**
+## 0Why did you make this change?
 * We made this change to prevent any sort of abuse, and making the game easier.
 
 - Fixed crash upon respawn().
