@@ -770,3 +770,188 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 - Removed Dead Webhooks that no longer exist.
 
 - Added CrossBow Item to the server
+
+- Fixed island collisions! Yay!
+
+- Upon island creation, it'll now check if an island is already created at that location.
+
+**How does this work?**
+* Well, thanks to our SkyBlock::class API, we can check if the specific coordinates is at a specific island.
+* If it is, it'll return true, and teleport you to another location. If it isn't at an island, it won't teleport you any further. Returns false if not found.
+
+- We've finally added WorldBorders back into the server!
+
+- Fixed block glitching due to coordinates being too far. (No, this full fix hasn't fixed the coordinates issue, but we reduced the coordinates per hand to prevent glitches.)
+
+- Envoy coordinates have been reduced to fix block glitches.
+
+- Fixed crash upon using /changelog.
+
+- Fixed broadcasts with envoys spawnage.
+
+- Added Tip Message to /is kick so it clears up a bit of confusion.
+
+- You can now kick more than one player from your island. Example: Use /is kick iWin10PlayzMC ZeaoPlayzMC to kick the players: iWin10PlayzMC, and ZeaoPlayzMC.
+
+**What is the difference between /is kick and /is remove?**
+
+* /is kick, kicks players that are on your island at that time.
+* /is remove removes membership from your island, meaning they won't be able to cooperate with the island, and will be in visitor mode when they next teleport to your island.
+
+- It'll now state if you tried to kick yourself from your own island.
+
+- Improved #💻・console.
+
+- Completely fixed Color coding from appearing on discord.
+
+- Added the following new API Methods:
+
+* Network::removeCode() - Removes the code symbol, including & also.
+
+* Network::getBlockBelow() - Returns the block below your feet, or the highest Y-Value block located at.
+
+* Network::isBlockBelow() - Checks if the block below isn't air.
+
+* Network::sendAlertToStaff() - Sends a alerted message to all staff members available, meaning if they're online.
+
+
+- Removed the following Player::class methods:
+* Player::hasCustomJoin()
+
+* Player::setCustomJoin()
+
+* Player::hasFireworks()
+
+* Player::setFireworks()
+
+* Player::setJoinMessage()
+
+* Player::getJoinMessage()
+
+* Player::getTotalWarns()
+
+* Player::setWarns()
+
+* Player::addKitLevelIncrease()
+
+* Player::removeKitLevelIncrease()
+
+* Player::getKitLevelIncrease()
+
+* Player::getCells()
+
+* Player::getCellByID()
+
+* Player::addCell()
+
+* Player::removeCell()
+
+* Player::loadCells()
+
+* Player::getLastCellSignTapTime()
+
+* Player::setLastCellSignTapTime()
+
+* Player::getLastCellSignTapped()
+
+* Player::setLastCellSignTapped() 
+
+- Renamed the following Player::class Methods:
+
+* Player::getVote(callable $callback) -> Player::getVote(), which now returns an integer.
+
+- We've added a new warning system to this revamp! Before, there either wasn't a warn system, or it needed updating. Now, it'll detect warnings.
+
+## How it works?
+* You can use commands like: /warn, and /unwarn.
+* Yes, we have made this as simple as possible to make it way less confusing than it was previously.
+
+## New Commands added
+* /warn <player> <reason> - Warn another user for the given reason.
+* /unwarn <player> - Unwarns another user.
+
+- We've made a ton of changes to how warning works.
+
+## The new system: How it works?
+* Well, thanks to our MYSQL Providers, we can use this to make changes, to how it warns, how many warning points it give, etc.
+* Currently, the warning points is defaulted to 1 per warn, and can't be edited in any way. This is to prevent major abuse.
+* A good thing about our new warning system, is it detects how many warning points you have.
+* If the warning points is 3 or above, it'll automatically mute the given player with the reason: "Warned 3+ times", and it'll delete the given warn, so they start over from zero.
+* We make this a mute because you really only get warned if it's a chat offense, so this wouldn't make sense if it banned you for something that's not bannable, but rather muteable.
+* This makes staff's jobs 10x easier as they wouldn't have to mute the player if they're already muted.
+* It'll mute the given player for 6 hours within that reason. If you want to edit that time, you can remute them by using /mute <player> temp <time> <reason>
+
+- We've done a lot of core backends to ensure the server has no issues. This includes:
+
+* Adding Multi-Process support for Player::class loaded subjectives.
+
+## How does Multi-Process core work?
+* So it isn't like how it sounds - It's essentially a way to use Multiple Plugin classes, which basically works, when before, it didn't work.
+
+- We've added a new function: Player::getPluginClass() - Returns a main class file, dependant of which plugin used Player::load().
+
+- Fixed crash when using /unmute 
+
+- Fixed crash when using /unwarn.
+
+- Fixed crash when using /unban
+
+- Fixed crash upon loading into the server.
+
+- Added Respawn and Death messages to discord.
+
+- Renamed the following Network::API Methods:
+
+* Network::getStaffMembers() no longer has a parameter of checking the database. It's now restricted via permissions, not rankings.
+
+- Added offline support for the [item] chat messages.
+
+- Added the following API Methods:
+* Network::getAdmins() - Get's all admins on the server.
+
+* Network::getManagementMembers() - Returns all staff members that are apart of the Management team. (Including admins).
+
+- Fixed ALERT color coding from not working.
+
+- Added brand new Koth event game!
+
+## How does it works?
+* Koth, is an event-type game, bringing this to MCPE (or known as SkyFactions).
+* Essentially, the koth game is every 6 hours. 
+* Once the koth is opened, everyone that types /koth join, will be teleported to the Koth lobby, where they will wait until the game begins.
+
+## KEEP IN MIND
+* Koth game won't start back at 6 hours until the koth game its self begins. This is to prevent conflicts between another round, and the round that is currently there.
+* The game starts when there's 4 or more players in the koth lobby, or when somebody uses /koth start.
+* We have commands implemented, where you can open the koth lobby, by using /koth prestart.
+* This will then open the game to everybody, and those that type /koth join, will be in the waiting lobby.
+* Once the game begins, your objective is to be in the capture point AKA THe koth point.
+* The koth point, as in where you stand still to receive Capture points. We may call it a name soon, but that's what it'll be for now.
+* Once you reach 100 capture points, the game will end, and will give the winning team/solo some rewards. Rewards are currently not added yet. This is the main interface of what koth will be, and how it'll look.
+* Though I have finished coding koth, the rewards I haven't yet, which I will push out koth rewards in the upcoming updates.
+* If nobody captures the koth in 10 minutes, then nobody will win.
+
+- Fixed /koth bugging out.
+
+- Fixed /koth webhook from not working.
+
+- You can now leave a koth game by using /koth leave (If already in a game or lobby).
+
+- Using /koth join will no longer cause memory fault and fatal errors.
+
+- Using /koth leave will no longer cause memory fault and fatal errors.
+
+- Revamped koth commands to make them better, and respondable.
+
+- Koth Capture points now reset if you're not on the Capture stand.
+
+**Why did you make this change?**
+* We made this change to prevent any sort of abuse, and making the game easier.
+
+- Fixed crash upon respawn().
+
+- Added support for our Instant respawn system to the Koth.
+
+- Added Boss Bar Support to Koth.
+
+- Fixed crash when sending koth messages to discord.
