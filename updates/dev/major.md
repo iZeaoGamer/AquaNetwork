@@ -955,3 +955,214 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 - Added Boss Bar Support to Koth.
 
 - Fixed crash when sending koth messages to discord.
+  
+- Fixed Koth timer from starting at 1 second.
+
+- Fixed Game timer for Koth from ending on 1 second.
+
+- Koth game will now always be open, even after server restart. Now, the only time the next koth game can start, is every 6 hours.
+* So for example, if the koth game was opened, then there'll be a new saperate timer, which calculates how long the koth has been opened for (Before the koth game fully starts).
+* Once the koth game starts, it'll start the event timer to 6 hours. Once the koth game finishes, it'll not be joinable until it's opened again.
+* Essentially, this fixes the Koth not being opened upon restarts, when in reality it should've saved it.
+
+- Fixed Boss bar calculations timer.
+
+- All game, pre-game, and lobby timers now start at 0 seconds, instead of 1.
+
+- Fixed capture timer from freezing at an specific capture time if more than one player was in the game.
+
+- Fixed staff chat messages not being sent to discord.
+
+- Added End portal teleportation to your island, at /spawn.
+
+- Upon entering the end portal, you will either be teleported to your island, or if your island hasn't been created yet, it'll automatically create it for you!
+
+- We've finally added NPCS to the spawn (/spawn)
+
+- Yes, yes, and yes! We've finally fixed positions from going to the side of the block when either using /is spawn or using /spawn.
+
+* The fix was because the coordinates had to have .5 at the end of the coordinates, so that way, people could spawn in the middle of the block, rather than on the side of the block.
+
+Thanks to @Bubbly#6984 for bringing this to my attention!
+
+- Fixed hunger drainage when using end portals to go to your island.§
+* Though this fix hasn't been fully fixed, it gives you more food hunger health upon teleportation. This seems to fix the issue, for now.
+  
+- Fixed end portal from not teleporting you for the 2nd time after first entering it.
+
+- Fixed NPC Commands from becoming broken.
+
+- Fixed NPCS from not showing at spawn.
+
+- Fixed NPCS from appearing in different worlds, which shouldn't be shown in.
+
+- Added the following new Player::class methods.
+* Player::hasSpawned() - Checks if the user has spawned yet.
+
+* Player::setSpawned() - Sets whether or not they've spawned into the server yet. More preferribly when onJoin() occurrs.
+
+* Player::setRulesRead() - Sets the reading state for the given player. Can be useful for diagnosing whether or not the players have read the rules.
+* If they have, it'll set hasPlayedBefore() to true.
+
+- Fixed crash when checking for staff permissions.
+
+- Fixed crash when checking out the rules.
+
+- Added new command: /rules - Checks out the rules for the server, directly in-game!
+
+- Added very good NPC Skins to /spawn.
+
+- Fixed /spawn from teleporting you to an incorrect place.
+
+- Added Info NPC, which shows all the information you need to know about the server.
+
+- Added News NPC, which shows a changelog for the latest version.
+
+- Added Rules to Info Form UI.
+
+- Added Core NPC, which shows all the information you need to know about cores.
+
+- Added basic implementation for Tutorials NPC. Currently, it doesn't work, but we plan to add this in the next update.
+
+- Added Floating Text to spawn, above the end portal, which displays the following:
+
+* How many islands are created on the server.
+
+* How many players are on the skyblock world.
+
+- Fixed bug, where player movement in the skyblock world would teleport you to another location, and can often put you stuck.
+
+- Fixed bug, where when you go to the end portal, it would teleport you to somewhere that's not your island.
+
+- We've now made it so everyone can now delete their own island, by using /is delete.
+
+- Changed prefixes for some faction commands.
+
+- We've modified Player::hasPlayedBefore() a bit, to ensure it supports reading rules, and accepting the terms of service.
+
+- Player::hasPlayedBefore() now only returns true if the player has read the rules. It'll also check for if they haven't played before, but most likely this will return false, as you would need to read the rules and accept the TOS to be marked as "Played before".
+
+- We've added custom erroring system to the rules system.
+
+- We've added checks to ensure the player is new, and if they are, the rules will appear, asking you to agree to the rules, but because of our handy API, we can make it so when you use /rules, this option wouldn't be validated as you're currently playing the server at that time, and wouldn't be able to use /rules if you haven't played before.
+
+- Added /rules - This command will allow you to read the rules without the acceptance mark.
+
+- Database should now go offline instantly. It'll check for its playability, to check if the database is still down, or online upon next database refresh.
+* Currently, this works for both offline and online gameplay.
+* This means there should be less issues with database crashes because the database goes offline before it communicates with the server.
+* The reason why we have the database refresh (every 60 seconds), is so it can check if the database is active/inactive or even offline. Because it only deactivates instantly when the database goes offline. This is to prevent crashes to the server because of database issues.
+- Fixed crashes when database goes back online, then goes down, it'll crash the server.
+* Because of the database update above, databases will deactivate instantly, dependant on whether or not the database is active.
+
+- Fixed crash when envoys automatically despawn if you're on the server.
+* This was because of poor checks to ensure the envoys have either despawned or not.
+
+- I've completely modified Player::teleport(), to ensure spawnpoints with center blocks are fixed.
+* We've also added a parmeter, where you can check if the position should be re-positioned to 0.5 x and z. If yes, it'll attempt to find X and Z's 0.5 (Center blocks) positioned.
+
+- We've added the following Player::class methods:
+* Player::positionSpawn() - Re-positions the given coordinates, depending on the coordinates given in the parmeter(s).
+
+* Player::getSpawnLocation() - Returns the given spawn point. The reason why we've added it to Player::class is simply because of backwards compatibility, and to ensure we can use spawn locations in classes that actually matter.
+
+* Player::setSpawnLocation() - Sets the spawn location at the exact coordinates the player is at.
+
+** To put it simply, setSpawnLocation() also repositions the spawn point the player is standing at.
+
+- Fixed spawning on the edge of the block for all locations that use Player::teleport() method.
+
+- Fixed special character issues with /rules, and /changelog.
+
+- We've re-coded a few skyblock commands to ensure it's better than ever.
+
+- Added the following new SkyBlock Commands:
+* /is invite - Invites another player to your island.
+
+* /is accept - Accepts a player's island invitation.
+
+* /is deny - Denies a player's island invitation.
+
+- Removed the following SkyBlock Commands:
+* /is add
+
+- We've saperated /is visit, replaced it with /is home, and made /is visit a saperate command.
+
+- /is visit will now bring a UI, where you can teleport to a player's island.
+* This is so much easier than using commands to teleport to a player's island.
+* /is tp will be for your own island, whereas /is visit will be for teleporting to other player's islands.
+
+- Fixed /is accept from not sending the join message to all island members.
+
+- We've now sorted the player names alphabetically from /is visit UI.
+
+- We've added how much total islands have been created from the Visit UI.
+
+- You can no longer invite yourself to your island.
+
+- You can no longer accept yourself from your own island.
+
+- You can no longer deny yourself from your own island.
+
+- Completely re-coded Command mapping for SkyBlock plugin, cleaning plugin.yml, and allowing the server to load commands better, and more reliable.
+
+- Along with this change, we've removed permissions from plugin.yml, and made our own Command map system. A bit like PMMP, but our very own! With a useful getCommands() array, to fetch all the skyblock commands into one, clean code.
+
+- We've finally added Form UI's to the /is command.
+
+* We've actually made it so you can use either forms, or commands. To use forms, just type /is help, /is, or /is test (an example of a invalid command).
+
+- We've added a lot of icons to SkyBlock Forms.
+
+- Fixed a lot of argument errors.
+
+- All usages now come under getUsage() when typing a usage out, instead of the per-usage system.
+
+- Added a new class: SkyBlock::getCommandMap() - Where all the command mapping takes place!, alongside registeration, unregisteration, etc.
+
+- Fixed crash when clicking the X button on Custom Form UI's that have the input option.
+
+- Fixed /is kick from incorrectly kicking users.
+
+- Fixed Visit menu from not bringing you back to the menu if you close out of the Visiting menu, and if you previously went to that menu whilst in the main skyblock menu.
+
+- Admin commands no longer display in /is help UI if you don't have permission to them.
+
+- Mark the user has permission if the permission node is null.
+* This means we can use hasPermission() in all of our commands. We don't have to, but we can now if we want to.
+
+- Fixed end portal from not teleporting you to your island.
+
+- Island's help UI is now in alphabetical order.
+
+- Added Home commands!
+
+- Added /home set
+- Added /home tp
+- Added /home list
+- Added /home delete
+
+- We've changed Combat tagging, and how it works.
+* Changed Combat timer to 15 seconds.
+
+- Use CombatTag's new API methoding to ensure the user is combat tagged before sending them the timeout message.
+
+- Fixed /home delete command from not displaying the home name correctly that you wanted to delete.
+
+- Fixed heads duplicating upon death().
+
+- Fixed death messages duplicating upon death.
+
+- Fixed world conflictions.
+
+- Fixed not being able to move after you've read the rules.
+
+- Removed Instant respawn system as that became buggy.
+
+- Fixed crash when closing the /rules UI, by clicking Submit. This was because of the rules acceptance, which won't show if you've played before.
+
+- Fixed being able to bypass the Visiting system.
+
+- Added a new parmeter to Player::teleport(): $levelSupport.
+* If $levelSupport is true, it'll provide true level support, for example, if you're teleporting to another world, then this option would be useful for that.
+* If $levelSupport is false, it'll teleport to the coordinates that are in the current world you're in.
