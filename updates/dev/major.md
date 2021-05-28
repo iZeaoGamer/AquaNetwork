@@ -1245,7 +1245,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - We've removed the Factions plugin, and made support for SkyBlock only, in terms with commands. Yes, this is still SkyFactions, but having two plugins are a bit confusing, and just isn't needed. You can play SkyFactions than you'd normally would, just removed the plugin its self, as most of the commands we're not even using due to the server's concept, and us already implementing most of the features.
 
 - ## Added the following new commands:
-* /is guardian - Spawns a guardidan to protect your island.
+* /is guardian - Spawns a guardian to protect your island.
 * /is shop - Opens the Island shop.
 
 - Removed Faction map from scoreboard, as that didn't actually work for some reason.
