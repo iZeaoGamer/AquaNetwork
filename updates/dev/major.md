@@ -5,11 +5,11 @@
 - Start work on SkyFactions (Our first mixed gamemode), between Factions and SkyBlock.
 - Added a very unique way of raiding: Cores. (Info at #👀・sneakpeaks.)
 
-**What are Cores?**
+## What are Cores?
 - Cores, are essentially a way of raiding. If you have a core, then you can't be raided. If your core get's destroyed, raiding is possible. Try to protect the core as much as possible, fight enemies, and get them away from the core.
 
 
-**How does a core work?**
+## How does a core work?
 
 To raid an Island you first need to destroy the core of an Island. This core can be upgraded with "Essences" and gets more and more health per Upgrade. After the core of an island is being destroyed the attackers are able to completely raid the base and loot them. The defenders of the base can defend their base too, with traps or other Features. You can also save money in a Core.
 If you click on the core of your faction you open a GUI where you can do different things, such as giving it Essences and saving money.
@@ -123,7 +123,7 @@ Level 3 has 6h Cooldown.
 
 - Added Activity Points. 
 
-How they work?
+## How they work?
 - Activity points, is a currency system for Factions, where you can do certain subjective's to receive Activity points. There are a few ways you can get Activity points. The ways are:
 * Mining - 0.5 per break.
 * Placing - 0.25 per place.
@@ -336,7 +336,7 @@ the database will recognize this, and display 160 max player slots instead of 80
 * BossBar: Sends the same data per player.
 
 - Removed Network::isGamemode() API function because it will now always return true, so the best option is to remove it entirely.
-- Removed the following API Methods:
+- ## Removed the following API Methods:
 * Network::onEnchant()
 * Network::isEnchantmentServer()
 * Network::isGamemode()
@@ -350,14 +350,14 @@ the database will recognize this, and display 160 max player slots instead of 80
 * Core::isLimbo()
 * Core::getInventories()
 
-- Renamed the following API Methods:
+- ## Renamed the following API Methods:
 * Network::number_format_short() -> Network::shortNumber(), and improved the function.
 * Network::calctime() -> Network::getFullTime()
 * Network::timeFormat() -> Network::getFullTime()
 * Network::timeToSeconds() -> Network::getFullTime()
 * Network::isLobby() -> Network::isLobby() - Returns bool instead of string.
 
-- Addded the following new API Methods:
+- ## Addded the following new API Methods:
 * Network::getTotalPlayers() - Totals all of the players online function, combined.
 * Network::readURL() - Reads the link from the URL, can be used for file transfer purposes, code sided.
 
@@ -717,14 +717,6 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 - Fixed breaking spawners when you're in visitor mode or do not have access to an island, the floating text would disappear for a second.
 * This has since been fixed.
 
-- Removed the WorldBorder.
-
-## Why did you remove the Worldborder?
-* We removed the World Border because of how easy it could've been to collide with another island's coordinates.
-* We removed World Border to ensure coordinates are from 0 to 500k from X and Z. That way, it'll be a lot less conflicts between Island coordinates, and random X and Z coordinate.
-
-- Island creation/Restart now goes out from 0 to 500k X and/or Z.
-
 - Fixed error upon onDisable() with Saving the Server Management side via MySQL.
 
 - ServerManager now saves if the database was online at that given time. This is to prevent errors.
@@ -804,7 +796,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Completely fixed Color coding from appearing on discord.
 
-- Added the following new API Methods:
+- ## Added the following new API Methods:
 
 * Network::removeCode() - Removes the code symbol, including & also.
 
@@ -815,7 +807,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 * Network::sendAlertToStaff() - Sends a alerted message to all staff members available, meaning if they're online.
 
 
-- Removed the following Player::class methods:
+- ## Removed the following Player::class methods:
 * Player::hasCustomJoin()
 
 * Player::setCustomJoin()
@@ -856,7 +848,7 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 * Player::setLastCellSignTapped() 
 
-- Renamed the following Player::class Methods:
+- ## Renamed the following Player::class Methods:
 
 * Player::getVote(callable $callback) -> Player::getVote(), which now returns an integer.
 
@@ -900,13 +892,13 @@ You can obtain 2 Essences and 5 Iron blocks from them dropping!
 
 - Added Respawn and Death messages to discord.
 
-- Renamed the following Network::API Methods:
+- ## Renamed the following Network::API Methods:
 
 * Network::getStaffMembers() no longer has a parameter of checking the database. It's now restricted via permissions, not rankings.
 
 - Added offline support for the [item] chat messages.
 
-- Added the following API Methods:
+- ## Added the following API Methods:
 * Network::getAdmins() - Get's all admins on the server.
 
 * Network::getManagementMembers() - Returns all staff members that are apart of the Management team. (Including admins).
@@ -996,7 +988,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - Fixed NPCS from appearing in different worlds, which shouldn't be shown in.
 
-- Added the following new Player::class methods.
+- ## Added the following new Player::class methods.
 * Player::hasSpawned() - Checks if the user has spawned yet.
 
 * Player::setSpawned() - Sets whether or not they've spawned into the server yet. More preferribly when onJoin() occurrs.
@@ -1061,7 +1053,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - I've completely modified Player::teleport(), to ensure spawnpoints with center blocks are fixed.
 * We've also added a parmeter, where you can check if the position should be re-positioned to 0.5 x and z. If yes, it'll attempt to find X and Z's 0.5 (Center blocks) positioned.
 
-- We've added the following Player::class methods:
+- ## We've added the following Player::class methods:
 * Player::positionSpawn() - Re-positions the given coordinates, depending on the coordinates given in the parmeter(s).
 
 * Player::getSpawnLocation() - Returns the given spawn point. The reason why we've added it to Player::class is simply because of backwards compatibility, and to ensure we can use spawn locations in classes that actually matter.
@@ -1076,14 +1068,14 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've re-coded a few skyblock commands to ensure it's better than ever.
 
-- Added the following new SkyBlock Commands:
+- ## Added the following new SkyBlock Commands:
 * /is invite - Invites another player to your island.
 
 * /is accept - Accepts a player's island invitation.
 
 * /is deny - Denies a player's island invitation.
 
-- Removed the following SkyBlock Commands:
+- ## Removed the following SkyBlock Commands:
 * /is add
 
 - We've saperated /is visit, replaced it with /is home, and made /is visit a saperate command.
