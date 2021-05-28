@@ -1166,3 +1166,145 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - Added a new parmeter to Player::teleport(): $levelSupport.
 * If $levelSupport is true, it'll provide true level support, for example, if you're teleporting to another world, then this option would be useful for that.
 * If $levelSupport is false, it'll teleport to the coordinates that are in the current world you're in.
+
+- You can now fit /is desc all in one text upon going towards someone's claim.§
+* Because we use wordwrap(), this is actually possible. Every 15 width, a new line will occur in the string/message.
+
+- We've added back Instant respawn, but more basic.
+
+- Fixed crash when hitting the ground too hard message attempts to occur.
+* This was because we didn't implement this type of message ourselves. My mistake!
+
+- Fixed dying multiple times in a row.
+* This issue was because of the respawn timer. This caused issues with the server, so we therefore recoded it.
+
+- Upon death, it'll now automatically teleport you to spawn.
+
+- Upon death, it'll now also activate PlayerRespawnEvent() for further support compatibility.
+
+- Fixed lag upon death(), and upon pvp().
+
+- Fixed dying in protected areas, if you fell from a high place.
+* This was because we weren't checking if the EntityDamageEvent() was cancelled, and didn't add the @priority tag as Monitor.
+
+- You can no longer die if you're in /fly.
+
+- You can no longer die if you're in creative.
+
+- Fixed /rules from appearing as the color symbol at the end of the whole rule book message.
+
+- Added support for in-game rules only in /rules. To view rules on our discord server, you can read them there!
+
+- Added Discord link to /rules.
+
+- Fixed death messages from occurring twice.
+
+- Fixed crash upon leaving the game after /is create was executed.
+
+- Fixed crash upon leaving the game after /is restart was executed.
+
+- It'll now only create your island if you don't log out during the /is create process. If you log out, the island creation will cancel.
+
+- It'll now only restart your island if you don't log out during the /is restart process. If you log out, the island recreation will cancel.
+
+- Fixed /is create from removing all of the island datas.
+
+- Fixed /is delete from removing all of the island datas.
+
+- Fixed /is restart from removing all of the island datas.
+
+- Plugin loading discord message is now in alphabetical order.
+
+- Plugin disabling discord message is now in alphabetical order.
+
+- Fixed Koth Webhook.
+
+- /is visit will now display "No islands created" if no islands have been found.
+
+- Fixed island corruption crashing the server.
+* If for some reason, a user's island data was corrupted, it'd crash the server. Now, it'll give you an error regarding this, and to contact support. (Like using commands that relate to your island).
+
+- /idle now broadcasts it into the console channel on discord.
+
+- Revamped /is top.
+
+- /is top now supports multiple pages.
+
+- Updated /is top UI, and added support for multiple pages.
+
+- You can no longer add unlimited pages to /is top that are empty.
+
+- Fixed /tp from teleporting you to an inaccurate coordinates, or the player's coordinates, but inaccurately.
+
+- Fixed /spectate on <player> from teleporting you to an inaccurate player's coordinates.
+
+- Fixed Online TP, or selecting a player UI to teleport to, from teleporting you to an inaccurate player's coordinates.
+
+- Fixed /tp from not teleporting you to the coordinates.
+
+- We've removed the Factions plugin, and made support for SkyBlock only, in terms with commands. Yes, this is still SkyFactions, but having two plugins are a bit confusing, and just isn't needed. You can play SkyFactions than you'd normally would, just removed the plugin its self, as most of the commands we're not even using due to /is commands implementing them.
+
+- Added the following new commands:
+* /is guardian - Spawn a guaridan to protect your island.
+* /is shop - Opens the Island shop.
+
+- Removed Faction map from scoreboard, as that didn't actually work for some reason.
+
+- Made ActivityPoints via the database, instead of a .yml file.
+
+- Scoreboard is now a lot smaller than previously.
+
+- Fixed crash when using /is shop.
+
+- Fixed crash when using /is guardian.
+
+- Fixed crash when trying to obtain Banknotes from /is shop.
+
+- Added the following new API Methods:
+* SkyBlock::getIslandRank() - Returns a island ranking, as apart of /is top.
+* SkyBlock::getGuardians() - Shows how much guardians you currently have. Returns integer.
+* SkyBlock::setGuardians() - Sets the amount of guardians you currently have. Most preferably how much has spawned.
+* SkyBlock::sendTopIslands() - Sends the top 10 most valued islands along with the page specified by the sender.
+* Player::getActivityPoints() - Returns how much ActivityPoints you have.
+* Player::addActivityPoints() - Adds the given activity point to the player.
+* Player::removeActivityPoints() - Removes the given Activity point to the player.
+
+- Fixed color coding issue with obtaining the player name that had their core destroyed.
+
+- Fixed issue, where falling into the void will always set your state to Visitor. Now, this shouldn't occur.
+
+- Fixed being able to obtain unlimited starter items, by using /is create or /is restart, constantly lot out, and log back in. You do the same process over again, and you would then get unlimited items. Now, this has been patched.
+
+- Fixed Guardians amount from going into the negatives. This is because iron golems take longer to die from the void (Due to their health being at 100 HP), and therefore, takes away the amount of guardians, used as negative numbers. This has since been patched.
+
+- We've now renamed the Island per name in /is top to their actual island name, instead of the player's name.
+
+- We've added a new argument: <name> for both /is create and /is restart. This is because we're relying on island names now, instead of player names.
+
+- Renamed command: /is name -> /is rename.
+
+- Upon going into the end portal, it'll now ask you what name you'd like your island to be. If you close out, and you move, it'll open again, and so on.
+
+- /is create and /is restart with no more arguments will now open a Form UI. We may do this with most commands in the future.
+
+- We've changed /is help UI, so it shows the usages now, instead of only the command names.
+
+- Added the following new API Methods:
+* SkyBlock::getIslandByName() - Returns only the Island that has a name.
+* SkyBlock::isSameName() - Returns if the island name given is the same as any of the island names found. Returns true if the same, returns false if not the same. 
+
+- Renamed the following API Methods:
+* SkyBlock::getIslandName() now returns island leader/member prefix alongside the island name(s).
+* SkyBlock::getIslandRank() now returns null if the island/island name isn't found.
+
+- You can no longer (re)name a already-existing island.
+
+- We've completely changed how SkyBlock Chat formatting works.
+
+**How does the new chat formatting work?**§
+* We've made many changes on how chat formatting works. Essentially, we now have Island member/leader prefixes. If you're a member of a island, it'll state * before the island name. If you're a leader of an island, it'll state ** before the island name.
+* We've also added Island ranking chat to the server. It's basically faction rank, but island ranking. It'll state what place you are in /is top, so say if I was 3rd top island, it'll state "#3" with the island prefix and island name.
+* We've added these implementations because I wanted to be one of the first MCPE Servers that provided faction-like ranking formatting, as described here.§
+* Yes, we do have it differently than any other servers. Island ranking works with /is top, allowing you to know what place someone is in /is top, directly in chat. This just makes it 10x better than it was previously.
+
+- Fixed Island claim displays from displaying the island member/leader prefix.
