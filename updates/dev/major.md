@@ -1244,7 +1244,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've removed the Factions plugin, and made support for SkyBlock only, in terms with commands. Yes, this is still SkyFactions, but having two plugins are a bit confusing, and just isn't needed. You can play SkyFactions than you'd normally would, just removed the plugin its self, as most of the commands we're not even using due to /is commands implementing them.
 
-- Added the following new commands:
+- ## Added the following new commands:
 * /is guardian - Spawn a guaridan to protect your island.
 * /is shop - Opens the Island shop.
 
@@ -1260,7 +1260,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - Fixed crash when trying to obtain Banknotes from /is shop.
 
-- Added the following new API Methods:
+- ## Added the following new API Methods:
 * SkyBlock::getIslandRank() - Returns a island ranking, as apart of /is top.
 * SkyBlock::getGuardians() - Shows how much guardians you currently have. Returns integer.
 * SkyBlock::setGuardians() - Sets the amount of guardians you currently have. Most preferably how much has spawned.
@@ -1289,11 +1289,11 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've changed /is help UI, so it shows the usages now, instead of only the command names.
 
-- Added the following new API Methods:
+- ## Added the following new API Methods:
 * SkyBlock::getIslandByName() - Returns only the Island that has a name.
 * SkyBlock::isSameName() - Returns if the island name given is the same as any of the island names found. Returns true if the same, returns false if not the same. 
 
-- Renamed the following API Methods:
+- ## Renamed the following API Methods:
 * SkyBlock::getIslandName() now returns island leader/member prefix alongside the island name(s).
 * SkyBlock::getIslandRank() now returns null if the island/island name isn't found.
 
@@ -1301,10 +1301,10 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've completely changed how SkyBlock Chat formatting works.
 
-**How does the new chat formatting work?**§
+## How does the new chat formatting work?
 * We've made many changes on how chat formatting works. Essentially, we now have Island member/leader prefixes. If you're a member of a island, it'll state * before the island name. If you're a leader of an island, it'll state ** before the island name.
 * We've also added Island ranking chat to the server. It's basically faction rank, but island ranking. It'll state what place you are in /is top, so say if I was 3rd top island, it'll state "#3" with the island prefix and island name.
-* We've added these implementations because I wanted to be one of the first MCPE Servers that provided faction-like ranking formatting, as described here.§
+* We've added these implementations because I wanted to be one of the first MCPE Servers that provided faction-like ranking formatting, as described here.
 * Yes, we do have it differently than any other servers. Island ranking works with /is top, allowing you to know what place someone is in /is top, directly in chat. This just makes it 10x better than it was previously.
 
 - Fixed Island claim displays from displaying the island member/leader prefix.
