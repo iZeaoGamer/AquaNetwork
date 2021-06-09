@@ -1300,3 +1300,112 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 * Yes, we do have it differently than any other servers. Island ranking works with /is top, allowing you to know what place someone is in /is top, directly in chat. This just makes it 10x better than it was previously.
 
 - Fixed Island claim displays from displaying the island member/leader prefix.
+
+- Fixed Island description display when entering a claim from not cutting the long-ass word, if it's one word, but really long.
+* Before, it wouldn't make a new line if the long word is at the width limit. Now, it'll make a new line.
+
+- Changed /is help UI, to make the color coding a bit more unique and better.
+
+- Fixed cooldown on minions when leveling up.
+
+- Fixed crash when leveling up the Mage minion.
+
+- Fixed crash upon spawning an automatic island guardian, using Mage Minion.
+
+- Fixed Nametag above player's head.
+
+- Added more Devices display support to the Scoretag/Nametag.
+
+- Blocked people being able to use /tp whilst in visitor mode.
+
+- Blocked people being able to use /spectate whilst in visitor mode.
+
+- Fixed being able to execute /spawn more than once, which would lead to it becoming buggy, having more than one timer enabled at once.
+
+- Fixed crash when giving yourself an id that is out of bounds. Now, it'll default it to stone when you exceed the ID packet limit.
+  
+- Item names now need to be valid, instead of causing you to crash.
+
+- Fixed all client crashes, and player data corruption when using /item incorrectly, such as when you're giving yourself the id: 1000000000000000000, when that's not an id, and that causes to crash because it's out of reach.
+
+- Removed /give, and replaced this with /item.
+
+- Added randomised spawn countdown timers (From 1 - 15 seconds).
+
+- Added Kills and KillStreaks to the server!
+
+- Added multiple /is top types support to the server.
+
+- Added /is top kills
+
+- Added /is top killstreak
+
+- Fixed Minions from not despawning properly.
+
+- Updated /is top UI to display island values.
+
+- Added Kills and Kill Streaks to the scoreboard, which was proprosed by the suggestion: #61.
+
+- Added /is addstate (For management only)
+
+- Added new command: /is info - This command will allow you to check for either your or other player's island information.
+
+- Added Island Info to Island Management UI.
+
+- Updated /is top UI, and add support for multiple types.
+
+- Updated server to the new Minecraft Version: v1.17.0.
+
+- Fixed crash upon joining the server.
+
+- Fixed crash when setting a game rules changed packet.
+
+- Added Ding sound when hitting another player using a bow.
+
+- It'll now display information on the given player when hit by an arrow.
+
+- Elytras now function, like in Vanilla.
+
+- Locking your island will now automatically teleport those that are a visitor to spawn, as per requested.
+
+- Fixed crash when using /is lock.
+
+- Added Island value, and Island ranking to /is info.
+
+- Island ranking will now display for all island roles, and not just leader.
+
+- Added new Core upgrade: Regenerate Core Health. This upgrade, will allow you to heal your core, within a specific amount of seconds. This uses Regeneration effect, and you can buy Regeneration effect for your core from Level I - IV, which lasts for 10 seconds before the upgrade is gone.
+
+- You can no longer hit yourself using a projectile.
+
+- Changed the error message for Hitting yourself using a projectile.
+
+- Renamed command: /upgrade -> /is upgrade.
+
+- Added /is upgrade UI to /is Management UI.
+
+- Fixed taking damage from lava or fire when you're in visitor mode.
+
+- Fixed crash when using /ban.
+
+- Fixed crash when using /warn.
+
+- Fixed crash when using /mute.
+
+- Fixed crash when using /unban.
+
+- Fixed crash when using /unwarn.
+
+- Fixed crash when using /unmute.
+
+- Fixed crash when obtaining a tag.
+
+- Fixed crash when the tag does not exist.
+
+- Fixed crash when obtaining a tag note.
+
+- Added vanilla command autofill system.
+
+- Added new command field: /ban <player> list.
+
+- Added new command field: /mute <player> list.
