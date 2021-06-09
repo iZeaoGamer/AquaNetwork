@@ -1406,6 +1406,6 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - Added vanilla command autofill system.
 
-- Added new command field: /ban <player> list.
+- Added new command field: /ban [player] list.
 
-- Added new command field: /mute <player> list.
+- Added new command field: /mute [player] list.
