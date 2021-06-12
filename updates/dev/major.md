@@ -1409,3 +1409,128 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - Added new command field: /ban [player] list.
 
 - Added new command field: /mute [player] list.
+
+- Fixed server crash when deleting your island.
+
+- Fixed server crash when island name is null.
+
+- You can no longer join more than one island.
+
+- There is now no arguments to /is leave, as that'll count towards the island you're a member of.
+* Now, it'll check for the leader of the island you're a member of. If it appears you are the leader of the island, it'll state "You can't leave your own island". If you're not apart of any islands, then an error message will appear.
+
+- We've completely re-done some parts of the Island UI interface.
+
+- We've removed the following /is commands:
+* /is on
+* /is members
+* /is rank
+* /is value
+
+- Most of the island commands removed, are because /is info already has them, so no need to duplicate the messages.
+
+- We've re-categorized a lot of island UI Commands. Here's what's been recatgorized:
+* /is top: Island Management -> Island Profile
+* /is info: Island Management -> Island Profile
+* /is help: Main UI -> Island Profile
+* /is visit: Main UI -> Island Profile
+* /is leave: Island Management -> Island Profile
+
+- We've added the following new sections in /is info:
+* Is Leader - Checks if the player name you entered from /is info, is the leader of the island.
+* Banned Players
+* Leader Online
+* Visiting an island: Keep in mind - This section will only appear if the island leader is online.
+
+- We've renamed the following sections in /is info:
+* Island Ranking: Now has a # before the ranking position.
+
+- We've made some changes with /is visit.
+
+- Island names will now appear next to the leader's name from /is visit.
+* This will make things 10x easier, so you don't have to go looking at the island name that the player is in.
+
+- AFK Pools will no longer stop you from being A.F.K or Idle. Instead, it'll still afk or idle you, no matter what.
+
+- ActivityPoints will no longer continue if you're in AFK or Idle Mode.
+
+- Fixed crash when you sometimes try to join the server.
+
+- Renamed main command: /is teleport -> /is home
+
+- /is home will now teleport to your leader's island, instead of only teleporting to your island if you're the leader. For example:
+* If you weren't the leader of the island you're a member at, /is tp wouldn't work, and simply wouldn't teleport to your leader's island.
+* Now, /is tp will check for your island's leader name, and will then teleport to their island. If the leader name isn't found, an error will appear.
+
+- /is leave will now teleport you to spawn. This is to prevent abusing a bug/glitch with being on the player's island whilst you type /is leave.
+
+- /is create can only be executed if you're not apart of any other islands.
+
+- Changed some moderation behaviors to ensure the server is at a better moderation status.
+
+- Fixed /is ban from incorrectly banning a user from your island.
+
+- Changed all island leader related errors; If the user isn't the leader, or not in an island, then it'll now state this.
+
+- Added new section to /is info: Island Rank Name/Symbol.
+
+- You can now use /is info on other players freely when you aren't in an island. Before, an error would occur.
+
+- Added the following new island commands:
+* /is chat - Toggles on/off island chatting.
+* /is here - Checks what island you're standing on.
+
+- We've changed the following alias/commands to their new commands:
+* /is disband - Deletes an island.
+* /is home - Teleports you to your island home.
+* /is sethome - Sets your island home.
+
+- We've added the following island aliases for commands:
+* /is create: /is make.
+* /is description: /is motd
+* /is disband: /is delete
+* /is guardian: /is protector.
+* /is help: /is ?
+* /is home: /is tp, /is teleport, /is spawn
+* /is private: /is lock.
+* /is sethome: /is setspawn
+* /is top: /is leaderboard, /is lb
+
+- Fixed double spacing in Player tags.
+
+- Fixed crash when using /is remove.
+
+- Fixed Player's nametag above from always appearing with the leader symbol, even if they're not actually the leader.
+
+- The server will now broadcast when your island member joins the game.
+
+- The server will now broadcast when your island member leaves the game.
+
+- Added the following API Methods to SkyBlock::class:
+* SkyBlock::isMember() - Returns true if it's a member of this island, returns false if you're not.
+* SkyBlock::isLeader() - Checks if you're the leader of an island. Returns true if you are, returns false if you are not.
+* SkyBlock::isMemberSymbol() - Checks if you have the member symbol (*). Returns true if you have, returns false if not.
+* SkyBlock::isLeaderSymbol() - Checks if you have the leader symbol (**). Returns true if you have, returns false if not.
+* SkyBlock::getIslandSymbol() - Returns the string symbol (Either ** or *), or "..." if not found.
+
+- We've completely re-coded /is commands, and the commands and its messages are now form based UI's.
+
+- Fixed crash when using /is delete
+
+- Fixed crash when using /is restart
+
+- It'll now state if the creation type is "created", or "restarted".
+
+- /is kick can only kick one user per command, not multiple. This was apart of the new /is UI update.
+
+- Added Island Chat to Island Profile UI.
+
+- Added Island Here to Island Profile UI
+
+- Added Island Protector/Guardian to Island Management UI.
+
+- Added Island Shop to Island Profile UI.
+
+- Fixed booleans returning 1 as a display message in certain commands/Island UI's.
+
+- Fixed /is restart from sometimes allowing the core to fall into the void.
