@@ -3,7 +3,7 @@
 ## This changelog introduces a new and complete Core revamp, along with: Major API changes (API BC), and many changes with the concurrent server.
 
 - Start work on SkyFactions (Our first mixed gamemode), between Factions and SkyBlock.
-- Added a very unique way of raiding: Cores. (Info at #👀・sneakpeeks.)
+- Added a very unique way of raiding: Cores. (Info at #👀・spoilers.)
 
 ## What are Cores?
 - Cores, are essentially a way of raiding. If you have a core, then you can't be raided. If your core get's destroyed, raiding is possible. Try to protect the core as much as possible, fight enemies, and get them away from the core.
