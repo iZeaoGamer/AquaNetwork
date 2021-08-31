@@ -2539,15 +2539,15 @@ Here are the following channels that are in this category:
 
 - Fixed not being able to obtain Unbreaking Enchantment from Enchantment shop category in /shop.
 
-- Having more than one XP Bottles will now automatically add up to your xp balance, and remove all of the XP Bottles, instead of doing it one by one, thus making it longer a d for you.§
-§
-- Fixed crash when attempting to add your XP due to Mending.§s
-§
-- We've changed how the queue system hides players. It'll now hide them a lot efficiently now.§
-§
-- Added Invisibility particles to the queue system.§
-**HOW IT WORKS?**§
-* When you're put in the queue, the invisibility effect will be added to you.§
-* The duration does depend on the queue time.§
-* For example, if the queue time is at 5 seconds, you'll have your invisibility effect for 5 seconds.§
+- Having more than one XP Bottles will now automatically add up to your xp balance, and remove all of the XP Bottles, instead of doing it one by one, thus making it longer and hard for you.
+h
+- Fixed crash when attempting to add your XP due to Mending.
+
+- We've changed how the queue system hides players. It'll now hide them a lot efficiently now.
+
+- Added Invisibility particles to the queue system.
+**HOW IT WORKS?**
+* When you're put in the queue, the invisibility effect will be added to you.
+* The duration does depend on the queue time.
+* For example, if the queue time is at 5 seconds, you'll have your invisibility effect for 5 seconds.
 * This fixes a lot of bugs relating to players that are able to get in a higher queue position, which if they both spawned at the same time, one wouldn't be able to see the other, or even both of them!
