@@ -2268,7 +2268,7 @@ Here are the following channels that are in this category:
 - Fixed incorrect trees from growing.
 
 - Added new Minion: LumberJack.
-**HOW DOES IT WORK?**
+**sss DOES IT WORK?**
 * A lumberjack, is where it'll break all logs connected together, and add them to your linked chest.
 * Because we're so unique, I've decided to add Custom Trees to the server.
 **What is custom trees?**
@@ -2376,7 +2376,8 @@ Here are the following channels that are in this category:
 * Now, we've made it so the Island members error doesn't occur if shooting yourself.
 
 - Added Wands!
-**How it works?**
+# How it works?
+ 
 * There are currently 6 types of wands.
 * Each type has their own ability and effects.
 * Here are the following effects we currently provide:
@@ -2412,7 +2413,7 @@ Here are the following channels that are in this category:
 - Fixed /pvp timer from becoming broken, and unuseable.
 
 - Added BRAND NEW TUTORIAL MODE!
-**How it works?**
+# How it works?
 * Once you're loaded into the server, a UI will appear, asking you if you'd like to know more about the gamemode. If you preceed to continue, it'll show you around the server.
 
 - Moved /spawn command to the SkyFactions core.
@@ -2431,7 +2432,8 @@ Here are the following channels that are in this category:
 - Added /kit
 
 - Finally added Donator kits to /kit!
-**HOW IT WORKS?**
+# HOW IT WORKS?
+
 * Currently, you can only obtain donator kits. We may plan on adding more kits soon.
 * Each kit comes with their own cosmetics!
 * That's right! All donator kits will come with their own cosmetics you can use against your enemy!
@@ -2462,8 +2464,8 @@ Here are the following channels that are in this category:
 
 - Fixed an issue where armor would always be put onto your armor slot when you right click/tap with the enchantment table.
 
-- Added Grappling hook.
-**How it works?**
+- Added Grappling hook.  
+How it works?
 * If you've been here since ZectorPE hub was released, then you've probably heard of "Grappling hooks".
 * On ZectorPE, you could use Grappling hooks to get around places.
 * On VirtualPE, you can use grappling hooks to get around, but to also get away from your enemies! It's essentially a cosmetic, useful for PvP.
@@ -2546,7 +2548,9 @@ h
 - We've changed how the queue system hides players. It'll now hide them a lot efficiently now.
 
 - Added Invisibility particles to the queue system.
-**HOW IT WORKS?**
+  
+# HOW IT WORKS?
+ 
 * When you're put in the queue, the invisibility effect will be added to you.
 * The duration does depend on the queue time.
 * For example, if the queue time is at 5 seconds, you'll have your invisibility effect for 5 seconds.
