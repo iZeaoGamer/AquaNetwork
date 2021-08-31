@@ -1534,3 +1534,1020 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - Fixed booleans returning 1 as a display message in certain commands/Island UI's.
 
 - Fixed /is restart from sometimes allowing the core to fall into the void.
+
+  - Fixed miner minion from despawning upon every restart.
+
+- Fixed multiple cores from spawning at the same time.
+
+- We've completely re-done Island generation, and how it works.
+
+- There is now a queue for creating/restarting your island.
+
+- Added a new queueing system to the server.
+**How it works?**
+* When you join the server, you will be added to the queue alongside your queue position spot.
+* The more the players, the longer the queue time is and queue position spot.
+* NOTE - Ranked players and Staff will be in the higher priority queue list.
+
+- Added a new Anti-Glitch system to the server.
+**How it works?**
+* We have a new system implemented now, that disallows the following:
+
+- Breaking protected blocks
+
+- Placing protected blocks
+
+- Ender Pearling phasing.
+
+- The anti-glitch implementations for Break and placing will now teleport you to prevent going through blocks. That's how our anti-glitch system works.
+
+- Fixed issue when cancelling EntityTP() it would crash the server.
+
+- You can no longer use /is sb if you aren't in an island.
+
+- Deleting your island will now disable Island scoreboards. That way, it'll prevent server crashes to do with islands not being found.
+
+- Completely revamped our Moderation system completely. Here's what we've changed:
+
+- Removed the following commands in flavour of /moderate:
+* /vanish
+* /reveal
+
+- Our moderation system now has a built-in disguise system.
+
+- We now have a paid hosting service! Thanks to @Tivercey for buying the server for us!
+
+- We've completely re-designed our scoreboards system.
+
+- Every scoreboard type, will have a different design-color, which makes it unique from everything else.
+
+- Added a new command: /hud.
+
+* This command, will allow you to open the scoreboard editor. In that UI, you can choose which scoreboards you'd like to enable/disable.
+
+**KEEP IN MIND**
+
+* You can only enable one scoreboard at a time.
+
+- We've added a brand new spawn! Still not finished yet, but massive thanks to @Bubbly, and a bit of thanks to @Tivercey for helping out with the spawn!
+
+- We've added Always Sunrise time.
+
+**How this works?**
+
+* In the new spawn world, it'll be stuck in Sunrise time. It makes the feeling good as well! :)
+
+- Added Support for Minecraft: 1.17.10.
+
+- Added the following new channels to discord:
+* #staff-movement
+* #public-support
+* #private-support
+* #report-details
+* #staff-reports
+* #public-reports
+* #response-time
+
+- Removed the following channels on discord:
+
+* #staff-support -> #private-support
+* bug-report -> #public-reports
+* staff-report -> #public-reports
+* player-reports -> #public-reports
+* #punish-format
+* #the-global-protocol
+
+- We're now supporting MySQL Offline databases.
+
+**How it works?**
+
+* So basically, we support most of the features whilst the database goes offline. If it goes offline, all of the data will automatically be set as a SQLite database, until MySQL comes back online.
+
+- We've changed our setting a player's rank command usage.
+
+- We've added discord support for /setgroup.
+
+- We've completely re-designed our Ban, and mute system, to make it mobile friendly.
+
+- We've renamed the discord channel from #sneakpeeks -> #spoilers to prevent spelling confusions.
+
+- Fixed Island Scoreboard from becoming too large.
+
+- Fixed crash when you don't have an island, and you try to turn the scoreboard on.
+* Although, it'll say you turned it on, there are now checks added, where it'll check if you have an island. If you don't, the scoreboard will not display.
+
+- Fixed Floating Texts from lagging the server.
+
+- Added the following leaderboards to PvP Area:
+* Island Value Top
+* Richest player top. (Money)
+* Kills
+* Kill Streaks
+* Most active players 
+
+- Added a brand new spawn! Big thanks to @bubbly for building it!
+
+- Moved NPCS to the new spawn.
+
+- Staff can no longer break/place blocks in Regioned areas, unless they have build mode on.
+* Now, this had came as an issue for some time now.
+* Basically, this means those that were protected using worldguard,
+* will now not allow staff or anybody from breaking/placing blocks unless they use /buildmode on.
+
+- We've added a little hot/house for the Queued players.
+
+- We've re-done a bit of the Queue system.
+
+**What's been changed in regards to our Queuing system?**
+
+- Added Floating Texts to queued players.
+* Essentially, when you're in the queue, the floating text will appear infront of you.
+
+- The queue timer is much shorter than previously.
+
+- We've added Estimate Wait Time to Queue FT.
+
+- And that was about it with the Queue changes.
+
+**Server-Side Changes**
+- Fixed PvP being turned on at spawn.
+
+- Added PvP Arena.
+
+- Added a huge koth arena! Thanks to bubbly for helping with the areas that needed filling.
+
+**Feature Changes**
+
+- Removed Trojans entities. They'll now act like invisible entity. Let me explain to you how it will work:
+* Trojans do not display. Every so minutes, the trojan will go onto a random user's island, and if they have a minion, depending on the chance, it'll remove a random item from the minion inventory.
+* But that doesn't end there. You can still use your perks/upgrades from the minion's upgrade system to protect the minions from trojans attacks.
+
+- Added unstabled Races. We will improve on this overtime, but currently, it may be unavailable for use.
+
+**Server-Build changes**
+- Added Welcome floating text messages.
+
+- Added PvP Floating text to the PvP Area hole, which takes you to our PvP Arena.
+
+- Fixed duplication of Island Value Top title, which before, appeared twice.
+
+- Removed "Data refreshes every x seconds" at the bottom of each leaderboard.
+
+**NetworkCore V2.0-dev Version**
+- We've completely re-designed our Network Core's namespaces.
+
+- All API related methods will go in \core\utils
+
+- All namespaces are now built with: core\, instead of VMPE\Zeao
+
+- We've replaced GalacticPlayer Class with: CustomPlayer Class.
+
+- Our Player class namespace is now built with: \core\player, as pre-described in api 4.0, which is what will happen in api 4.0.
+
+- Replaced core\Discord\Zeao to core\discord
+
+- Replaced core\Ranks\Zeao to core\ranks
+
+- Replaced core\ to core\bossbar
+
+- Moved all of the commands to core\commands
+
+- Remove core\essential, and make them all in core\commands
+
+- Removed duplicated core\event(s) folders.
+
+- Fixed a recent bug, where if you try to turn off vanish, even if you're not vanished, it'll say "You have been vanished for 5 decades".
+
+- Fixed envoys from lagging the server.
+
+- Fixed our anti-glitch system from glitching you inside a block, which allows you to block glitch.
+
+- Added /is customspawn
+* This command will allow you to create a custom island spawnpoint.
+* Note - THose management, do not use this! It could mess up with the current layout/setup. Thank you!
+
+- As of NetworkCore v2.0.0, we've now added "Traits" API.
+
+**What is a trait?**
+* It's a type of class where you can add a use case after the class code, which allows you to use API Methods in the given trait that you've enter, which would work for Network class, as an example.
+
+- We've moved everything non-network related subjects to its own respectful trait.
+* In the upcoming future (Hopefully by api 4.0.0), we will be moving everything that doesn't involve around Networking to its own respectful class.
+
+- Fixed envoys from completely breaking the server.
+
+- Fixed envoys timers from going back to 60 minutes, which should've expired, and not reset back to the given counter, unless a new one spawns.
+
+- Fixed fireworks from only appearing once.
+
+- Fixed chest from constantly appearing back whenever you tried claiming the envoy reward.
+
+- Added new command: /shop.
+
+- Fixed issue with ores - For some reason, I made it as oreos, not ores. Sorry!
+
+- We've finally fixed all Shop icons from /shop!
+
+- Moved floating texts at spawn to each corner. Thanks to @Bubbly for this suggestion!
+
+- Fixed an issue where you were unable to eat in the PvP Arena.
+
+- Fixed an issue where you'd lose your hunger in PvP Arena!
+
+- Fixed an issue where you'd take fall damage upon entering the arena.
+
+- Fixed issue with PvP Arena End portal from not teleporting you to the arena, but instead, it would teleport you to your island/create an island UI.
+
+- Fixed loading in data from keeping you as a queued player.
+
+- You can no longer fly in the PvP Arena. (If you aren't staff.)
+
+**NOTE**
+Staff will need to be in vanish to not have their fly disabled for security reasons. They aren't allowed to abuse their power on it or they would be demoted.
+
+- Added KDR Leaderboard to PvP Area.
+
+- Added Personal Stats at spawn.
+
+- Fixed KDR Leaderboard.
+
+- Fixed Kill Streaks Leaderboard.
+
+- Fixed block drops from becoming broken, and nothing would drop.
+* This was because of the gamerule: doTileDrops, which was set to 0 AKA false.
+
+- Time set is now always mid day for the following worlds:
+* PvP Arena
+* Koth Arena.
+* The queue world.
+
+- Fixed kill streaks/kdr ranked numbers from appearing incorrect top stats.
+
+- Fixed ranking position of kill streaks from being incorrect at Spawn, personal stats.
+
+- Rename type from streaks to streak as that was what it was set to in the database.
+
+- We've added our own Enchantment Shop UI, where you can buy vanilla enchants!
+
+**How it works?**
+* So you type /shop, go to "Enchantment Shop", and then click on a enchant category. Once you've selected one, you can buy an enchant within that category.
+* After selecting, it'll confirm to you if you're sure you want to buy this enchant. Click "Yes", and it'll state if you've bought it or not.
+
+**A good thing about this feature**
+* We have an automatic upgrade system to the Enchant shop. Already got sharpness level 1? When you buy it again, it'll state you've upgraded the item to Sharpness level 2.
+
+- We've reverted the startup() messages to our old, but better startup system for the Network core.
+* Essentially, this means startup() is 10x faster than before. Say good bye to the previous startup() system, and say hello to our fastest system we currently have in place.
+
+- It now only takes a few seconds for the startup() to fully enable everything. Before, it would take from 30 seconds to a minute or two just for it to start up, which is really long for a server.
+
+- Gold ores now drop Gold ingots.
+
+- Iron Ores now drop Iron Ingots.
+
+- You can no longer hit people that are coming down to PvP Arena.
+* This means, if you and someone else both warps at the same time, you both can't hit each other until you're near towards the ground.
+
+- You can now use ender pearls whilst in the PvP Arena.
+
+- Flying whilst in the PvP Arena now relies on whether or not the user is vanished, rather than with staff permissions.
+* We've done it this way for security reasons.
+
+- You no longer take fall damage in Koth Arena.
+
+- Moved the following to /shop:
+* Island Shop
+* Fuel Shop
+* MotherBoard shop
+
+- Removed the following commands:
+* /is shop -> /shop.
+* /is sb -> /hud 
+* /fuel
+* /is netherspawn -> moving this to Island /setspawn command.
+* /is netherzone -> Moving this to island /setzone command.
+
+- Fixed crash when confirming your purchase with money!
+
+- Fixed incorrect amounts of currency being used.
+
+- Fixed players not being able to hit you if you turned on build mode for the current session.
+
+- Completely re-designed MotherBoard Shop.
+
+- Renamed everything in the MotherBoard shop from Core -> MotherBoard Shop.
+
+- You can now spawn a new motherboard, by buying it in the core shop.
+
+- Fixed Currency Converter from converting incorrectly.
+
+- Added a lot of new Island Admin commands to Island Admin panel.
+
+- Added the following new Island admin commands to the Admin panel UI:
+* Custom Spawn
+* Create World
+* Reload Data.
+* Set Zone
+* Set World
+* UpdateZone
+
+- You'll now get teleported to the queue area upon spawning into the server, instead of when you actually have spawned.
+* This is because onJoin() wouldn't activate teleportation instantly. Instead, it would stay where you are for a few moments before teleportation.
+
+- We've revamped our discord server entirely. Removed a lot of channels that weren't needed, and made the discord server cleaner.
+
+* Here are the following discord channels that are being removed:
+- #😡・staff-reports -> #💼・management
+- #👥・staff-list -> #ℹ・staff-info
+- #ℹ・punish-info -> #📳・moderate
+- #🤬・warn-words -> #📳・moderate
+- #💻・console -> #🎑・minecraft
+- #👊・punishments -> #📳・moderate.
+- #🏠・build-reference
+- #🔨・build-plans -> #📝・server-ideas.
+- #📀・db-status -> #🎑・minecraft.
+- #💻・response-time -> #🎑・minecraft.
+- #🐱・tyler’s-ideas -> #📝・server-ideas.
+- #🛑・reports-details -> #📳・moderate.
+- #👀・staff-activity -> #🎑・minecraft.
+- #👋・inactive -> #👋・inactive (May change this if I make this more of a purpose.
+- #🤞・staff-movement
+- #📸・media -> #💬・global 
+- #🙋・support -> #👥・public-support or #🤫・private-support.
+- #👥・team-members
+- #💭・discuss-talk 
+- #🌛・apply-here -> #📢・newsletter
+- #🎊・updates
+- #🔈・voice-rules -> #⚠・global-rules 
+
+**Staff Categories**
+We've (for the last time now), reorganised the categories.
+Meet our following staff categories:
+
+**Server Wide (STAFF)**
+This channel is where staff information and news letters are announced.
+Here are the channels that is in this category:
+#📣・staff-news
+#ℹ・staff-info
+
+**STAFF TEAM CHATS**
+This is where all staff chat related goes.
+Here are the channels that are in this category:
+#💬・staff-chat
+#🕴・higherups-chat.
+
+**Staff Team Voice**
+This is where all of our staff voice calls take place!
+
+**Staff**
+Here is where everything takes place. Console logging, server suggesting/ideas, Moderation, Punishment logs, and more!
+
+**Here are the channels that are in this category:**
+#📳・moderate
+#📝・punish-logs 
+#💼・management (For management only to see).
+#🎑・minecraft (For things that happen in-game!)
+#📝・server-ideas
+
+**STAFF MISCELLANEOUS**
+This is where the other channels that didn't quite fit the category names belong to.
+Here are the following channels that are in this chat:
+#👋・inactive
+#🎉・promo-demo 
+#🚨・to-do
+#📝・modlog 
+#🤖・staff-cmds 
+#🤡・exposed.
+
+**PUBLIC CATEGORIES**
+This discord revamp includes a few categories changes, making the discord server more organized.
+
+Here are the following categories and for which channel:
+
+**SERVER DETAILS**
+This category will help with finding the server information you need to join it.
+These are the following channels in this category:
+Server IP
+Server Port
+Vote Link
+Release Date (Remove soon)
+Store
+
+**Server INFO**
+We've done some changes in relations to this.
+These are the following channels in this category:
+#🚀・booster
+#❓・faq
+#👋・user-state 
+#✅・verification 
+#👥・partners
+
+**SERVER WIDE**
+This category is where all of the server network related content is published. So like news, rules, and things that make your game experience better, that is, if you like spoilers.
+
+Here are the following channels in this category:
+#📢・newsletter
+#⚠・global-rules 
+#👀・spoilers
+#🎉・giveaway 
+#🗳・polls
+#📝・change-log 
+
+**SERVER ROLES**
+This channel is where you go to verify your roles.
+Here are the following channels in this category:
+#☀・self-roles
+#🌈・color-roles
+
+**Social**
+This is where you become social. Interact with our community, chat with the staff, and making friends.
+Here are the following channels that are in this category:
+#general -> #💬・global
+#🤖・bot-cmds
+#👍・suggestions 
+ 
+ - We've added MotherBoard rewards.
+
+ **How it works?**
+ * When you raid a motherboard, the person that raided it can receive rewards. Rewards are in the Info UI in Motherboard section.
+
+- Fixed crash when using TNT to explode blocks.
+
+- Fixed issue when exploding, items dropped will be duplicated.
+
+- Fixed being able to use flint and steel in protected areas.
+
+- Added Clear Lag to the server.
+
+- Clear lag now clears items once every 10 minutes.
+
+- Fixed Queue floating texts from not disappearing after you've entered the server via our queue system.
+
+- Fixed Queue floating texts from appearing in the same coordinates in all worlds.
+
+- A raiding sound will now occur if a player that isn't apart of your island, and that isn't visitor, attempts to go to your island.
+* Though, there had been spoilers of a raiding sound occurring, but at that stage, it was only when you use the raiding minion to raid the base. Now, it'll do it every time someone finds your island.
+* The raiding alert will occur once every 10 seconds to prevent title spamming.
+
+- Added the following new island commands:
+* /is Fly
+* /is find
+  
+**/is fly**
+- Allows you to fly on your island. Cannot be used if you aren't in an island, or if you're flying in an island you're not apart of.
+
+**/is find**
+- It's basically /is map (/f map), but because we're unique, I've decided to completely rename the system to /is find.
+
+- Your fly will no longer disable if you have bought fuel, and if you are under a block, basically the Highest Y Coordinate at your location, and whether or not it's a block, it won't disable your fly.
+
+- You can now fly freely on islands you're apart of.
+
+- Fixed envoy platforms from not disappearing after 10 seconds.
+
+- Fixed spawners floating text from appearing incorrect information if there are more than one person viewing the floating text.
+
+- You can no longer place minions in areas that you shouldn't spawn them in.
+
+- Fixed crash when claiming envoys.
+
+- Fixed crash when flying sometimes.
+
+- Added /is ally command.
+* This command allows you to ally with other island leaders.
+* Allying also allows you to teleport to their island, even if it's locked.
+
+- Added the following Ally commands:
+* /is ally list - Shows a list of your allies.
+* /is ally add <leader> - Sends an ally request to another island leader.
+* /is ally remove <leader> - Removes an ally from your island.
+* /is ally accept <requester> - Accepts an ally invitation request.
+* /is ally deny <requester> - Denies an ally invitiation requet.
+
+- Fixed allying from not actually allying you.
+
+- Fixed Allying duplicate, where it'll say an island's name twice, or it just won't add the island, only one of them.
+
+- Fixed allying from resetting your data.
+
+- Added **BRAND NEW** CRATES to the server!
+
+- Chances can now be float chances in Crates and Envoys.
+
+- We've added our very own custom Menu for Opening a crate.
+
+- You can now get Sky keys from envoys.
+
+- Added more things to Market, big thanks to @Bubbly for doing that!
+
+- You can now use a brewing stand to open the AuctionHouse.
+
+- You can now use a Shulker box to open the /shop UI.
+
+- Added Crates area to Spawn.
+
+- Added Auction House area to Spawn.
+
+- Added Server Shop to Spawn.
+
+- Added Obsidian Breaker.
+
+**HOW IT WORKS?**
+* So Obsidian will have health.
+* Essentially, the total health of Obsidian is 10.
+* You can destroy its health per explosion using TNT.
+* Once there is no more health, the obsidian block will break.
+
+- Moved Raiding related items to a new shop category: Raiding Category.
+
+- Fixed MotherBoards from being able to be put in the void.
+* This was an issue for some time now.
+* Essentially, the issue was the blocks below it would explode using TNT, leading the MotherBoard into the void.
+* Now, the blocks below it or around it will not explode.
+* This only includes the blocks that are apart of the motherboard.
+
+- Fixed MotherBoard from taking knockback upon TNT explosion to it.
+
+- Added Obsidian Health Detector to Main shop.
+
+- Added Flint And Steel to Main shop.
+
+- Fixed flint and steel image from glitching in the UI.
+
+- Added Auction House to the server!
+
+- Added the following Auction House Commands:
+* /ah shop - Opens the main AuctionHouse UI.
+* /ah sell <price> - Sells an item in your hand for a certain price.
+* /ah listings - Shows all active listings of the player.
+* /ah categories - Opens category menu
+
+- Added the following new information categories to the Main Info UI:
+* Envoys (Includes rewards)
+* Crates (Includes Rewards and how to get them)
+
+- /spawn timer is now set to 3 seconds, instead of randomising the seconds.
+
+- Added Enchantment Table floating text at spawn.
+
+- Speeded up the Crates animation to x5.
+
+- You can now get Miner keys from Miner Minion.
+
+- Fixed minion upgrading levels from not working as intended.
+
+- You can no longer PvP your allies.
+
+- You can no longer PvP your island members.
+
+- Spawner Levels are now Roman Number, which means instead of for example, Level 1, it'll now say Level I, and so on.
+
+- TNT will no longer explode in areas that do not have an island claim.
+
+- You can no longer raid your own base.
+* This is simply so we can have a good feel of skyblock whilst still maintaining our factions part of the server.
+
+**So how do we raid then?**
+- You can be an insider, and give your coordinates to your friend so they can raid with you.
+
+- Fixed being able to PvP your island members/allies.
+
+- Fixed Crate from not closing sometimes after you opened it.
+
+- You can now get MotherBoard rewards every 10 minutes.
+
+- Fixed Per Player List from becoming broken.
+
+- Added $ sign to one of the Crate opening's money rewards.
+
+- Money rewards you obtain from crates will now turn into a Bank Note, instead of automatically adding it to your balance.
+
+- Renamed Money rewards to add "Note" name to them.
+
+- Add a comma inbetween thousands units in Crates opening and its money rewards.
+
+- Added Anti-Door Glitch to the server!
+
+- Those in creative mode can now bypass the Anti-Glitch system. This means you will not get teleported when you try to break blocks.
+
+- Made Motherboard alive reward message more specific as to how long the core's been alive for.
+
+**NOTE**
+* Core, is a nickname for MotherBoard. Though it's actually a Motherboard, you can also call it Core if you wanted to.
+
+- Improved Command glitching.
+
+- Added /is ally chat.
+
+- Added /rewards - Displays current rewards you've obtained, e.g Core rewards/raiding rewards, etc.
+
+- Added /profile
+
+- Added Minion Shop Category to /shop.
+
+- Added /craft - Opens the Crafting Table Menu.
+
+- Added /invsee
+
+- Added /enderinvsee
+
+- Added /pv
+
+- Added /ci, which does the same thing as /clearinventory.
+
+- Fixed Mage Minion from not spawning.
+
+- You can now get $100 from killing players.
+
+- All kill rewards will now go straight to /rewards.
+
+- Fixed heart particles from always occurring, even when the Core regeneration activates.
+
+- Fixed protected entity perk from becoming broken.
+
+- Removed Linkable chests to Heal Minions.
+
+- Heal Minion Radius is now set to 10 blocks.
+
+- Added Player Vaults (/pv)
+
+- Added back /invsee
+
+- Added back /enderinvsee
+
+- Fixed crash when using /invsee and /enderinvsee.
+
+- Added AI to Essence Minion.
+
+- Fixed Farmer bugs that occurred.
+
+- Staff Commands + Permissions are finally complete!
+
+- Separated Bans and Warns to make it their own UI, rather than using it all in one, as this caused bugs and confusions with it.
+
+- Added the following commands:
+
+- /warn
+- /warnlist
+- /warnlogs
+- /warnhistory
+- /unwarn
+
+- Fixed crash when trying to join when banned.
+
+- You will now get automatically banned if you leave the server whilst frozen.
+
+- Fixed /is ally remove from not being able to remove you from the island.
+
+- Fixed /is ally chat from not working as expected.
+
+- Added new API Method: getMergedMembers().
+* Essentially, this function merges the Island members and their ally members, merging it together, to make one method.
+* This is useful for if you're in /is ally chat, and want to talk with your allies alongwith your island members.
+
+- Added Pets to the server.
+**HOW PETS WILL WORK?**
+* Currently, there is no way of getting pets. But pets can be used to make your life literally x10 easier.
+* Want to quick teleport to your island? Then no problem! Use the Island Pet item to teleport to your island.
+* Want to add fire resistance to your effects? Cool! We've got that! Just use the Fire Resistance Pet.
+* Want to jump around like a bunny? You can do that! Juse use the Rabbit Pet to get around!
+* There are so much more you can do with pets. The pets limitation is endless, and we plan to add way more in the future.
+
+- Added /lagclear - Clears the lag manually.
+
+- Fixed not being able to place lava and water on your island.
+
+- Fixed Core Rewards from not being obtainable by other islands.
+
+- Allies no longer receive Core rewards as it isn't their core.
+
+- We've finally replaced the island owner's name with the Island's name upon destroying the core.
+
+- Fixed players being able to place minions whilst in a queue.
+
+- Added Sell Boosters to the server.
+**HOW IT WORKS?**
+* So Sell Boosters, are boosters, where you can sell for a lot more money than if it was a default booster, which is 1.
+* This helps so you can earn money quicker.
+
+- Added new command: /pvp
+
+- Fixed /pvp from becoming disabled temporarily.
+
+- Fixed Sell Boosters boss bar message from not disappearing when removing your sell booster.
+
+- Added **BRAND NEW** boss: Virus.
+**HOW IT WORKS?**
+* There is no way to obtain the boss, and it spawns every 3 hours in the PvP Arena.
+* PvP for players are turned off whilst this boss fight event is happening.
+* You can only teleport there once, so if you die, you can't go back there until everyone involved dies, or when the boss is defeated, then you can go to the arena.
+
+- Fixed crash when attempting to open Virtual crate.
+
+- Fixed virtual keys from not saving to the database.
+
+- Added Custom Farming
+**HOW IT WORKS?**
+* Custom farming, is a new way of farming! Essentially, you can place crops where appropriate. Once you place it down, you'll notice some changes.
+  
+**PARTICLES**
+* We have made it so particles appear when it's actually growing in real time, starting from 10 seconds.
+
+**Floating Text, Custom made**
+* We've made it so it now tells you how long before the crop fully grows.
+
+**BRAND NEW INTERFACE**
+* We now provide a way to check out your Crops status.
+* You can click on the Crop to open a UI.
+* In the UI, it only currently provides two things:
+* 1. Removing a Crop/Sapling.
+* 2. Close
+
+- The good thing about this, is our ideas with this are literally endless.
+
+- Fixed incorrect trees from growing.
+
+- Added new Minion: LumberJack.
+**HOW DOES IT WORK?**
+* A lumberjack, is where it'll break all logs connected together, and add them to your linked chest.
+* Because we're so unique, I've decided to add Custom Trees to the server.
+**What is custom trees?**
+* So in our case, custom trees are where all of the trees will automatically grow after the previous growth.
+* Essentially, you place a sapling down, and it'll tell you in REAL TIME how long until it fully grows.
+
+**Offline support?**
+* So as tested, trees growing does and should provide offline support. Though, there are some things relating to this that do not have offline support.
+* Currently, things like Minions WILL not work when you're offline. This is something we simply cannot fix, as this is due to chunks being unloaded.
+
+- Added LumberJack to /shop
+
+- I've made going to /shop so much easier now. Here's the changes we recently made for most parts of the shop:
+* We've made confirmination of buying items a lot easier now, especially for those that wanted to buy minions.
+* Before, you'd need to reopen the minion shop every time you buy something. Now, it'll stay on that page until you feel like you want to close out of the menu.
+* We may support more than one item count for Minion shops in the future.
+* We've also done this with things like Island shop, Enchantment shop, etc.
+* I've also fixed wrong-closing form for certain parts of /shop.
+* This basically means when you close the UI, it could appear in a random UI that you never visited.
+
+- We've fixed up a shit ton of incorrect information with the /is UI. (May still be more to come).
+
+- Using the full island arguments command will no longer send a input field, where you'll need to enter a player's IGN.
+* As soon as you type the full argument, it'll recognize it easilly, and won't make you type it all over again. ;O
+
+- Fixed /is accept and /is deny UI from actually being able to do it via the UI interface.
+
+- We've made it so it messages you the error and the success message along with the Form UI opening.
+* Essentially, before, when you typed /is accept <player>, sometimes the UI wouldn't display, and would then unable to find out what it said.
+* Now, the messages will be sent in chat along with the Form UI for better  and easier understanding.
+
+- Added the following new Island Commands:
+* /is members
+* /is banlist
+
+- Added the following new Form UI's for /is:
+* Island Allies -> Island Management category
+* Island Fly -> Island Profile category.
+* Island Find -> Island Profile Category.
+* Island Members -> Island Management
+* Island BanList -> Island Management
+
+- We've added Allies information as well as your own island's information!
+
+- Trees and crops will now instantly grow 60 seconds before a server restart occurs where possible.
+* This is handy for those with minions, as they're always active regardless.
+* The minions can mine the tree, which then re-activates the tree/crop timer again.
+
+- Fixed new line issues in /is info.
+
+- Fixed /is info <player> from always appearing as yourself's information, rather than the given player you entered's island information.
+
+- Fixed crash when interacting with Dark oak and Acacia sapling, as those currently do not support growing trees on them.
+
+- Unknown Sapling will now default it to Oak Saplings upon interaction.
+
+- Fixed a bug, where you wouldn't be able to fully heal your core if it's close to full health.
+
+- Fixed certain skyblock commands from breaking completely.
+
+- Fixed /is create from not being able to create the island name, thus leading to an error.
+
+- Fixed /is restart from not being able to restart with the new island name, thus leading to an error.
+
+- Fixed /is rename from not being able to rename your island, thus leading to an error.
+
+- Fixed /is description from not being able to add a description to your island, thus leading to an error.
+- Added Fire wand.
+
+- Fixed Fire wand from exploding island blocks.
+
+- Added array_filter to our explosions. Coming soon, we may implement Async Explosions, which shouldn't lag as much whilst exploding.
+
+- Use empty() instead of isset() in arguments with spaces, such as /is create, /is restart, /is rename, and /is description.
+
+- Added a very cool system with island titles, where after it says which island you're on, it'll then say regarding doing /is info if you're interested as to who they are.
+
+- Fixed Raiding alerts for allies.
+
+- Fixed being able to raid your own allies/island's base.
+
+- We've resorted TNT to ensure exploding doesn't lag the server.
+* When we mean by not lag, this doesn't mean TNT its self won't lag the server if you have like 1,000 TNT.
+* This means tnt won't lag the server if it's small amount, like 1 tnt, which before, would've caused a delay between its igniting and explosion phase.
+
+- Fixed TNT from lagging the server.
+
+- Fixed being able to bypass TNT explosions if ignited a lot of the tnt in the same area.
+
+- Added new Function: canExplode()
+* Whether or not the TNT can be exploded in that area/given area.
+* Returns true if able to explode in that area, and returns false if tnt explosions are cancelled.
+
+- SkyBlock::getPlayersAtIsland() parmeter can now be a string, instead of just a Player::class parmeter.
+
+- Fixed bug where saplings would turn into oak saplings after server restarts.
+
+- Block metas after 4 of saplings will now turn into their appropriate forms.
+
+- Fixed MOTD from appearing with an incorrect Season.
+* Before, the MOTD would display "S2" instead of S1. Now, this has properly been detected and fixed.
+
+- Fixed double error messages when attempting to shoot yourself with a bow or a projectile.
+* Before, both errors: "You cannot PvP your island members" and "You cannot hit yourself using a projectile" would occur.
+* Now, we've made it so the Island members error doesn't occur if shooting yourself.
+
+- Added Wands!
+**How it works?**
+* There are currently 6 types of wands.
+* Each type has their own ability and effects.
+* Here are the following effects we currently provide:
+** Fire Wand - Shoots arrows that will burn your enemy.
+** Explosion Wand - Allows explosive arrows upon hit.
+**Speed Wand - Gives you and your allies speed.
+**Growth Wand - Makes you and your allies bigger than other normal sized players.
+**Blindness - Gives your enemy blindness.
+**Poison - Gives your enemy poison.
+
+- Fixed a bug, where wands wouldn't give enemies effects when they aren't in an island.
+
+- Fixed a bug, where bad effective wands would go on yourself and your allies.
+
+- Fixed crash when explosion death message attempts to appear.
+* This was because we didn't have this type of death occurance in our configuration file.
+
+- Fixed Viruses boss from spawning in more than one.
+* This issue would've occurred when the chunks are unloaded, and it wouldn't recognize if there's more than one boss there.
+* Before, it would've spawned in more than one virus boss because it wouldn't recognize if the chunks are unloaded.
+* Now, it'll attempt to get rid of all the bosses until there's one left.
+* We do this by fetching array_rand() in the boss class its self.
+
+- Wands will no longer knock you back on good effective wands.
+
+- Wands will no longer knock you back on bad wand effectives.
+* The only time it'll do this, is if you're being damaged by them.
+
+- Bad effective wands will no longer knock you back if you're their ally/apart of their island.
+
+- Fixed /spawn timer from becoming broken, and unuseable.
+
+- Fixed /pvp timer from becoming broken, and unuseable.
+
+- Added BRAND NEW TUTORIAL MODE!
+**How it works?**
+* Once you're loaded into the server, a UI will appear, asking you if you'd like to know more about the gamemode. If you preceed to continue, it'll show you around the server.
+
+- Moved /spawn command to the SkyFactions core.
+* This is because /spawn is mainly for non-network gamemode server.
+* This means /spawn is for servers like SkyFactions, rather than implementing /spawn to the Network core its self, which /spawn wouldn't be considered as appropriate for the network core.
+
+- Fixed bug where it'd appear as the Tutorial Mode Request twice, once when joining, and the other when you load in the server.
+
+- The Tutorial Mode Menu should no longer allow you to bypass being able to move.
+* The reason why this occurred in the first place, is because onJoin() would occur, and you could select to go straight to tutorial mode, even if you're still in the queue.
+* Another reason is because when you're loading into the server (As in loading data titled screen), you were able to go to tutorial that way, thus bypassing the system.
+* Now, the UI will only appear 1-2 second after your data is fully loaded.
+
+- You can now remove an ally even when the ally island leader is offline.
+
+- Added /kit
+
+- Finally added Donator kits to /kit!
+**HOW IT WORKS?**
+* Currently, you can only obtain donator kits. We may plan on adding more kits soon.
+* Each kit comes with their own cosmetics!
+* That's right! All donator kits will come with their own cosmetics you can use against your enemy!
+
+- We've finished Player permissions! They're now all set up, and ready to go!
+
+- We've finished Donator Permissions! They're now all set up, and ready to go!
+
+- We've finished Staff permissions! They're now all set up, and ready to go!
+
+- Added per item permission for staff mode, to reduce being able to use items that they shouldn't have access to.
+
+- Fixed the following admin permissions:
+* /givemoney
+* /setmoney
+* /takemoney
+* /banknotes admin
+* /gamemode
+* /homeadmin
+
+- Fixed the following Moderator permissions:
+* /invsee
+* /enderinvsee
+
+- Players can now get banned if they're frozen and decide to leave the server.
+
+- Fixed crash when pressing "No" in the Enchant shop confirmation UI.
+
+- Fixed an issue where armor would always be put onto your armor slot when you right click/tap with the enchantment table.
+
+- Added Grappling hook.
+**How it works?**
+* If you've been here since ZectorPE hub was released, then you've probably heard of "Grappling hooks".
+* On ZectorPE, you could use Grappling hooks to get around places.
+* On VirtualPE, you can use grappling hooks to get around, but to also get away from your enemies! It's essentially a cosmetic, useful for PvP.
+
+- Crops will now appear as "Fully Grown" when it's grown fully, same applies to trees somewhat.
+
+- Fixed /kick command from acting like /ban, alongside its display.
+
+- /kick now works as intended.
+* before, /kick wouldn't work, and would then keep asking for the reason of the kick, even if you've already entered a kick reason.
+* Now, /kick will act appropriately, and kick the user if a reason is entered.
+
+- Fixed issue where staff weren't able to bypass the queue system.
+
+- Only staff can now join the server when it's full. We may add this for donators in the future. (To be confirmd).
+
+- Fixed Cheetah pet from not being functional.
+
+- Fixed Fire Pet from not being functional.
+
+- You can now only obtain one kit per 24 hours.
+* This is something we really wanted to do for quite some time now.
+* This also prevents having too much cosmetics in your inventory.
+* Essentially, comparing it to ZectorPE, it's a lot different.
+* ZectorPE - You could claim more than one kit per cooldown.
+* VirtualPE - You can only claim one kit per 24 hours, thus discludes multiple kits at once.
+* ZectorPE - Staff could claim all kits at once, without a cooldown.
+* VirtualPE - Staff will be included in a one kit only system.
+* This means staff will have to be involved in the same way as players and donators do - Using a one kit per 24 hours cooldown.
+* I think we're one of the only servers that provide this, hence why we're the #1 best unique skyblock + factions based servering network.
+
+- Improved on Pet effects, make them a bit longer.
+
+- Added cooldown for Grappling hooks to 20 seconds.
+
+- Reduced forever effects amplifier for Donators to Haste 1, and Night Vision 1.
+
+- Changed the ranks display in-game to make it look more professional.
+
+- Fixed chat formatting from messing its chat color with chat formatting.
+
+- Added all permissions to ranks.
+
+- Renamed Partner rank to Influencer rank in-game and on discord.
+
+- Fixed Explosion wand from being too overpowered!
+
+- Added the following new kits:
+* Starter Kit
+* Influencer Kit.
+* Fixed kit cooldown from becoming broken.
+
+- Moved Nether star to above and below Reward item.
+* This is so it's easier to understand where the reward item really is.
+
+- Fixed Spawners from not being functional.
+
+- Fixed crash when attempting to use /shop, and clicking "No" confirmination for Island shop.
+
+- Tutorial Menu will now only appear when a user has joined for the first time.
+
+- Explosion Wand is wayy less OP than before.
+
+- Fixed bug where going into the void will put you in Visiting mode, even though you never visited the island using /is visit.
+
+- Fixed /verify on our discord server.
+
+- Fixed Virus Boss from reaching too far.
+
+- Fixed Virus boss from its reach becoming too low.
+
+- Added /boss, which states how long before a boss spawns!
+
+- Fixed not being able to obtain Unbreaking Enchantment from Enchantment shop category in /shop.
+
+- Having more than one XP Bottles will now automatically add up to your xp balance, and remove all of the XP Bottles, instead of doing it one by one, thus making it longer a d for you.§
+§
+- Fixed crash when attempting to add your XP due to Mending.§s
+§
+- We've changed how the queue system hides players. It'll now hide them a lot efficiently now.§
+§
+- Added Invisibility particles to the queue system.§
+**HOW IT WORKS?**§
+* When you're put in the queue, the invisibility effect will be added to you.§
+* The duration does depend on the queue time.§
+* For example, if the queue time is at 5 seconds, you'll have your invisibility effect for 5 seconds.§
+* This fixes a lot of bugs relating to players that are able to get in a higher queue position, which if they both spawned at the same time, one wouldn't be able to see the other, or even both of them!
