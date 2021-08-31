@@ -1544,13 +1544,14 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 - There is now a queue for creating/restarting your island.
 
 - Added a new queueing system to the server.
-**How it works?**
+## How it works?
 * When you join the server, you will be added to the queue alongside your queue position spot.
 * The more the players, the longer the queue time is and queue position spot.
 * NOTE - Ranked players and Staff will be in the higher priority queue list.
 
 - Added a new Anti-Glitch system to the server.
-**How it works?**
+## How it works?
+  
 * We have a new system implemented now, that disallows the following:
 
 - Breaking protected blocks
@@ -1585,7 +1586,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 * This command, will allow you to open the scoreboard editor. In that UI, you can choose which scoreboards you'd like to enable/disable.
 
-**KEEP IN MIND**
+## KEEP IN MIND
 
 * You can only enable one scoreboard at a time.
 
@@ -1593,7 +1594,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've added Always Sunrise time.
 
-**How this works?**
+## How this works?
 
 * In the new spawn world, it'll be stuck in Sunrise time. It makes the feeling good as well! :)
 
@@ -1619,7 +1620,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We're now supporting MySQL Offline databases.
 
-**How it works?**
+## How it works? 
 
 * So basically, we support most of the features whilst the database goes offline. If it goes offline, all of the data will automatically be set as a SQLite database, until MySQL comes back online.
 
@@ -1658,7 +1659,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - We've re-done a bit of the Queue system.
 
-**What's been changed in regards to our Queuing system?**
+## What's been changed in regards to our Queuing system?
 
 - Added Floating Texts to queued players.
 * Essentially, when you're in the queue, the floating text will appear infront of you.
@@ -1669,14 +1670,14 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - And that was about it with the Queue changes.
 
-**Server-Side Changes**
+## Server-Side Changes
 - Fixed PvP being turned on at spawn.
 
 - Added PvP Arena.
 
 - Added a huge koth arena! Thanks to bubbly for helping with the areas that needed filling.
 
-**Feature Changes**
+## Feature Changes
 
 - Removed Trojans entities. They'll now act like invisible entity. Let me explain to you how it will work:
 * Trojans do not display. Every so minutes, the trojan will go onto a random user's island, and if they have a minion, depending on the chance, it'll remove a random item from the minion inventory.
@@ -1684,7 +1685,7 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - Added unstabled Races. We will improve on this overtime, but currently, it may be unavailable for use.
 
-**Server-Build changes**
+## Server-Build changes
 - Added Welcome floating text messages.
 
 - Added PvP Floating text to the PvP Area hole, which takes you to our PvP Arena.
@@ -1693,7 +1694,8 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - Removed "Data refreshes every x seconds" at the bottom of each leaderboard.
 
-**NetworkCore V2.0-dev Version**
+## NetworkCore V2.0-dev Version
+  
 - We've completely re-designed our Network Core's namespaces.
 
 - All API related methods will go in \core\utils
@@ -1728,7 +1730,8 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - As of NetworkCore v2.0.0, we've now added "Traits" API.
 
-**What is a trait?**
+## What is a trait?
+  
 * It's a type of class where you can add a use case after the class code, which allows you to use API Methods in the given trait that you've enter, which would work for Network class, as an example.
 
 - We've moved everything non-network related subjects to its own respectful trait.
@@ -1762,7 +1765,8 @@ Thanks to @Bubbly#6984 for bringing this to my attention!
 
 - You can no longer fly in the PvP Arena. (If you aren't staff.)
 
-**NOTE**
+## NOTE
+  
 Staff will need to be in vanish to not have their fly disabled for security reasons. They aren't allowed to abuse their power on it or they would be demoted.
 
 - Added KDR Leaderboard to PvP Area.
@@ -1789,7 +1793,7 @@ Staff will need to be in vanish to not have their fly disabled for security reas
 
 - We've added our own Enchantment Shop UI, where you can buy vanilla enchants!
 
-**How it works?**
+## How it works?
 * So you type /shop, go to "Enchantment Shop", and then click on a enchant category. Once you've selected one, you can buy an enchant within that category.
 * After selecting, it'll confirm to you if you're sure you want to buy this enchant. Click "Yes", and it'll state if you've bought it or not.
 
@@ -1880,36 +1884,43 @@ Staff will need to be in vanish to not have their fly disabled for security reas
 - #🎊・updates
 - #🔈・voice-rules -> #⚠・global-rules 
 
-**Staff Categories**
+## Staff Categories
+  
 We've (for the last time now), reorganised the categories.
 Meet our following staff categories:
 
-**Server Wide (STAFF)**
+## Server Wide (STAFF)
+  
 This channel is where staff information and news letters are announced.
 Here are the channels that is in this category:
 #📣・staff-news
 #ℹ・staff-info
 
-**STAFF TEAM CHATS**
+## STAFF TEAM CHATS
+  
 This is where all staff chat related goes.
 Here are the channels that are in this category:
 #💬・staff-chat
 #🕴・higherups-chat.
 
-**Staff Team Voice**
+## Staff Team Voice
+  
 This is where all of our staff voice calls take place!
 
-**Staff**
+## Staff
+  
 Here is where everything takes place. Console logging, server suggesting/ideas, Moderation, Punishment logs, and more!
 
-**Here are the channels that are in this category:**
+## Here are the channels that are in this category:
+  
 #📳・moderate
 #📝・punish-logs 
 #💼・management (For management only to see).
 #🎑・minecraft (For things that happen in-game!)
 #📝・server-ideas
 
-**STAFF MISCELLANEOUS**
+## STAFF MISCELLANEOUS
+  
 This is where the other channels that didn't quite fit the category names belong to.
 Here are the following channels that are in this chat:
 #👋・inactive
@@ -1919,12 +1930,14 @@ Here are the following channels that are in this chat:
 #🤖・staff-cmds 
 #🤡・exposed.
 
-**PUBLIC CATEGORIES**
+## PUBLIC CATEGORIES
+  
 This discord revamp includes a few categories changes, making the discord server more organized.
 
 Here are the following categories and for which channel:
 
-**SERVER DETAILS**
+## SERVER DETAILS
+  
 This category will help with finding the server information you need to join it.
 These are the following channels in this category:
 Server IP
@@ -1933,7 +1946,8 @@ Vote Link
 Release Date (Remove soon)
 Store
 
-**Server INFO**
+## Server INFO
+  
 We've done some changes in relations to this.
 These are the following channels in this category:
 #🚀・booster
@@ -1942,7 +1956,8 @@ These are the following channels in this category:
 #✅・verification 
 #👥・partners
 
-**SERVER WIDE**
+## SERVER WIDE
+  
 This category is where all of the server network related content is published. So like news, rules, and things that make your game experience better, that is, if you like spoilers.
 
 Here are the following channels in this category:
@@ -1953,13 +1968,15 @@ Here are the following channels in this category:
 #🗳・polls
 #📝・change-log 
 
-**SERVER ROLES**
+## SERVER ROLES
+  
 This channel is where you go to verify your roles.
 Here are the following channels in this category:
 #☀・self-roles
 #🌈・color-roles
 
-**Social**
+## Social
+  
 This is where you become social. Interact with our community, chat with the staff, and making friends.
 Here are the following channels that are in this category:
 #general -> #💬・global
@@ -1968,8 +1985,9 @@ Here are the following channels that are in this category:
  
  - We've added MotherBoard rewards.
 
- **How it works?**
- * When you raid a motherboard, the person that raided it can receive rewards. Rewards are in the Info UI in Motherboard section.
+## How it works?
+ 
+* When you raid a motherboard, the person that raided it can receive rewards. Rewards are in the Info UI in Motherboard section.
 
 - Fixed crash when using TNT to explode blocks.
 
@@ -1993,10 +2011,12 @@ Here are the following channels that are in this category:
 * /is Fly
 * /is find
   
-**/is fly**
+## /is fly
+
 - Allows you to fly on your island. Cannot be used if you aren't in an island, or if you're flying in an island you're not apart of.
 
-**/is find**
+## /is find
+  
 - It's basically /is map (/f map), but because we're unique, I've decided to completely rename the system to /is find.
 
 - Your fly will no longer disable if you have bought fuel, and if you are under a block, basically the Highest Y Coordinate at your location, and whether or not it's a block, it won't disable your fly.
@@ -2030,7 +2050,7 @@ Here are the following channels that are in this category:
 
 - Fixed allying from resetting your data.
 
-- Added **BRAND NEW** CRATES to the server!
+- Added ## BRAND NEW CRATES to the server!
 
 - Chances can now be float chances in Crates and Envoys.
 
@@ -2052,7 +2072,8 @@ Here are the following channels that are in this category:
 
 - Added Obsidian Breaker.
 
-**HOW IT WORKS?**
+## HOW IT WORKS?
+  
 * So Obsidian will have health.
 * Essentially, the total health of Obsidian is 10.
 * You can destroy its health per explosion using TNT.
@@ -2107,7 +2128,8 @@ Here are the following channels that are in this category:
 - You can no longer raid your own base.
 * This is simply so we can have a good feel of skyblock whilst still maintaining our factions part of the server.
 
-**So how do we raid then?**
+## So how do we raid then?
+  
 - You can be an insider, and give your coordinates to your friend so they can raid with you.
 
 - Fixed being able to PvP your island members/allies.
@@ -2132,7 +2154,8 @@ Here are the following channels that are in this category:
 
 - Made Motherboard alive reward message more specific as to how long the core's been alive for.
 
-**NOTE**
+## NOTE
+  
 * Core, is a nickname for MotherBoard. Though it's actually a Motherboard, you can also call it Core if you wanted to.
 
 - Improved Command glitching.
@@ -2206,7 +2229,8 @@ Here are the following channels that are in this category:
 * This is useful for if you're in /is ally chat, and want to talk with your allies alongwith your island members.
 
 - Added Pets to the server.
-**HOW PETS WILL WORK?**
+## HOW PETS WILL WORK?
+  
 * Currently, there is no way of getting pets. But pets can be used to make your life literally x10 easier.
 * Want to quick teleport to your island? Then no problem! Use the Island Pet item to teleport to your island.
 * Want to add fire resistance to your effects? Cool! We've got that! Just use the Fire Resistance Pet.
@@ -2226,7 +2250,8 @@ Here are the following channels that are in this category:
 - Fixed players being able to place minions whilst in a queue.
 
 - Added Sell Boosters to the server.
-**HOW IT WORKS?**
+## HOW IT WORKS?
+ 
 * So Sell Boosters, are boosters, where you can sell for a lot more money than if it was a default booster, which is 1.
 * This helps so you can earn money quicker.
 
@@ -2237,7 +2262,7 @@ Here are the following channels that are in this category:
 - Fixed Sell Boosters boss bar message from not disappearing when removing your sell booster.
 
 - Added **BRAND NEW** boss: Virus.
-**HOW IT WORKS?**
+## HOW IT WORKS?
 * There is no way to obtain the boss, and it spawns every 3 hours in the PvP Arena.
 * PvP for players are turned off whilst this boss fight event is happening.
 * You can only teleport there once, so if you die, you can't go back there until everyone involved dies, or when the boss is defeated, then you can go to the arena.
@@ -2247,16 +2272,17 @@ Here are the following channels that are in this category:
 - Fixed virtual keys from not saving to the database.
 
 - Added Custom Farming
-**HOW IT WORKS?**
+## HOW IT WORKS?
+ 
 * Custom farming, is a new way of farming! Essentially, you can place crops where appropriate. Once you place it down, you'll notice some changes.
   
-**PARTICLES**
+## PARTICLES
 * We have made it so particles appear when it's actually growing in real time, starting from 10 seconds.
 
-**Floating Text, Custom made**
+## Floating Text, Custom made
 * We've made it so it now tells you how long before the crop fully grows.
 
-**BRAND NEW INTERFACE**
+## BRAND NEW INTERFACE
 * We now provide a way to check out your Crops status.
 * You can click on the Crop to open a UI.
 * In the UI, it only currently provides two things:
@@ -2268,14 +2294,14 @@ Here are the following channels that are in this category:
 - Fixed incorrect trees from growing.
 
 - Added new Minion: LumberJack.
-**sss DOES IT WORK?**
+## HOW DOES IT WORK?
 * A lumberjack, is where it'll break all logs connected together, and add them to your linked chest.
 * Because we're so unique, I've decided to add Custom Trees to the server.
 **What is custom trees?**
 * So in our case, custom trees are where all of the trees will automatically grow after the previous growth.
 * Essentially, you place a sapling down, and it'll tell you in REAL TIME how long until it fully grows.
 
-**Offline support?**
+## Offline support?
 * So as tested, trees growing does and should provide offline support. Though, there are some things relating to this that do not have offline support.
 * Currently, things like Minions WILL not work when you're offline. This is something we simply cannot fix, as this is due to chunks being unloaded.
 
@@ -2376,7 +2402,7 @@ Here are the following channels that are in this category:
 * Now, we've made it so the Island members error doesn't occur if shooting yourself.
 
 - Added Wands!
-# How it works?
+## How it works?
  
 * There are currently 6 types of wands.
 * Each type has their own ability and effects.
@@ -2413,7 +2439,8 @@ Here are the following channels that are in this category:
 - Fixed /pvp timer from becoming broken, and unuseable.
 
 - Added BRAND NEW TUTORIAL MODE!
-# How it works?
+## How it works?
+  
 * Once you're loaded into the server, a UI will appear, asking you if you'd like to know more about the gamemode. If you preceed to continue, it'll show you around the server.
 
 - Moved /spawn command to the SkyFactions core.
@@ -2432,7 +2459,7 @@ Here are the following channels that are in this category:
 - Added /kit
 
 - Finally added Donator kits to /kit!
-# HOW IT WORKS?
+## HOW IT WORKS?
 
 * Currently, you can only obtain donator kits. We may plan on adding more kits soon.
 * Each kit comes with their own cosmetics!
@@ -2464,8 +2491,10 @@ Here are the following channels that are in this category:
 
 - Fixed an issue where armor would always be put onto your armor slot when you right click/tap with the enchantment table.
 
-- Added Grappling hook.  
-How it works?
+- Added Grappling hook.
+  
+## How it works?
+
 * If you've been here since ZectorPE hub was released, then you've probably heard of "Grappling hooks".
 * On ZectorPE, you could use Grappling hooks to get around places.
 * On VirtualPE, you can use grappling hooks to get around, but to also get away from your enemies! It's essentially a cosmetic, useful for PvP.
@@ -2549,7 +2578,7 @@ h
 
 - Added Invisibility particles to the queue system.
   
-# HOW IT WORKS?
+## HOW IT WORKS?
  
 * When you're put in the queue, the invisibility effect will be added to you.
 * The duration does depend on the queue time.
