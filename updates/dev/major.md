@@ -2584,3 +2584,119 @@ h
 * The duration does depend on the queue time.
 * For example, if the queue time is at 5 seconds, you'll have your invisibility effect for 5 seconds.
 * This fixes a lot of bugs relating to players that are able to get in a higher queue position, which if they both spawned at the same time, one wouldn't be able to see the other, or even both of them!
+
+- Changed some parts of Invisibility effects whilst in a queue.
+
+- Inventories will now be stored, and saved in the Player's class.
+
+- Inventories will now be cleared, allowing older inventories to be stored whilst in a queue.
+**HOW IT WORKS?**
+* When a user joins the server, it'll put them in a queue.
+* But when they do join the server, their inventories will be stored, and cleared so others are unable to see things like items in their hand, etc.
+* Once they're out of the queue, their old inventories will be restored to them, allowing them to play using their previous items they had before.
+
+- Logging out will no longer cause the inventories to be reset whilst in the queue, but right before they log out, it'll add the updated inventories to the player, thus preventing loss of items.
+
+- Server disabling will no longer cause the inventories to be reset whilst in the queue, but right before the server disables, it'll add the updated inventories to all queued players, thus preventing loss of items.
+
+- Fixed wands from once again becoming broken.
+
+- Wands will now use bad affects on non associated players.
+* For example, if you're in an ally or a part of someone's island, it'll now ignore them, and will use bad effects on them.
+* (Depending on what the effect is). If it's a good effect, then it'll do the opposite affect, and will give the ally/island member good effects.
+
+- Fixed issue where spawners floating text wouldn't disappear, thus leading a floating text to display without it actually working.
+
+- Fixed crash when removing non-floated text spawner.
+
+- Fixed explosion wand from not damnaging the enemy.
+
+**DISCORD CHANGES**
+- Added the following new channels:
+* #private-reports (Text Channel)
+* Beta Testers (Voice Channel)
+
+**What is #private-reports?**
+* So we will be discontinuing support for bugs/staff reporting in-game simply due to logging reasons.
+* We will be moving them to the channel: #private-reports on our discord server.
+* You open the ticket to report a staff/bug. It should tell you which one is for which.
+
+- Changed the Color of VitualPE Team Role on discord to Dark blue-ish.
+§
+- Changed the color of Yellow role on discord to light/bright yellow.§
+§
+- Renamed category from PUBLIC REPORTS to SERVER REPORTS.§
+§
+- Fixed rare crash where minions would crash the server due to getLevel() becoming null.§
+§
+- Fixed another furnace duplication, where using /furnace, and then closing out with empty items, and then clicking the Furnace block.
+* This would then cause a duplication bug.§
+§
+- The Virus boss will no longer attempt to attack a vanished player.§
+* This would've become an issue as people would be questioning why the boss isn't going after anybody seeable.§
+§
+- The virus boss will no longer attempt to attack a player in creative mode.§
+§
+- The virus boss will no longer attempt to attack a player in spectator mode.§
+§
+- Added a brand new report system to the server!§
+**HOW IT WORKS?**§
+* Essentially, you can use /report to report a player.§
+* Good thing about the new report system, is if the report reason isn't on there, you can click "Other" as the report reason, which will allow you to enter a custom reason of your own choice, as to the reason the user is getting reported.§
+§
+- Added a clean, built-in /reportadmin feature, improved it a shit ton whilst making it mobile friendly.§
+§
+- Added built-in report notifications system to the server.§
+**HOW IT WORKS?**§
+* When you join the server, if a new report has come through since you logged out, it'll notify you, and let you know of these reports.§
+* The report notifications and /reportadmin is strictly for Moderators and above.§
+§
+- Removed Tags from the server. We may provide them in the future, but for now, that's not where we're heading in terms with logics and API methoding.§
+§
+- Fixed /topmoney from not displaying the correct message.§
+§
+- Fixed /koth join from not teleporting you to the koth arena due to an invalid world.§
+§
+- Fixed /is visit selections from saying "0", thus acting like there was an island/player named "0".§
+* Before, /is visit selection (if no islands exists), would act like an actual island, and would then attempt teleportation.§
+* Now, it'll appear with the correct message, and will not attempt teleportation unless 1 or more islands have been created.§
+§
+- Deleting your island will now automatically disable your island scoreboard, and be automatically set as your Profile scoreboard.§
+§
+- Being removed from someone's island, will now automatically disable your island scoreboard, and be automatically set as your profile scoreboard.§
+§
+- Leaving someone's island will now automatically disable your island scoreboard, and be automatically set as your profile scoreboard.§
+§
+- Force deleting someone's island will now automatically disable their island scoreboard (If online), and be automatically set as their profile scoreboard.§
+§
+- Added Cooldown for Restarting/Deleting your island.§
+§
+- Fixed Temporary sell boosters from not activating.§
+§
+- Added a brand new AuctionHouse system.§
+* This action was mainly due to our old AuctionHouse system from becoming buggy.§
+* Now, we have a brand new, very cool, and useful AuctionHouse, waiting for you!§
+§
+- Completely rebranded /ah Interfaces.§
+§
+- Fixed an issue, where your items wouldn't display in /ah, even if you've put them to the Auction House.§
+§
+- Fixed an issue, where having two pickaxes, one enchanted, and the other without.§
+* If you use the item at a later slot, the enchanted one would appear in AuctionHouse, but it wouldn't be enchanted.§
+* Now, it'll appear as enchanted.§
+§
+- Temporary Sell Boosters are now stackable (Including the timer, and when you use the sell booster item to add the sell boost timer (if temporary)).§
+§
+- Getting defeated by a Virus Boss, will now give those involved the right amount of Sell boosters, which is -2.§
+* Before, if those involved died to a boss, it'll take away 2 sell boosters, which won't always be accurate to minus 2.§
+* Now, it'll set their sell boosters to minus 2 (-2).§
+§
+- Fixed an issue, where leaving the server whilst a boss fight takes place, wouldn't mark you as "Died" by the boss.§
+* So because you can only use /pvp once when a boss fight takes place, it'll mark you as Dead when you log out during this event, and if in the PvP Arena.§
+* This is to also prevent abuse, and glitches with the hasDied() function.§
+§
+- If those involved in the Boss Fight, get defeated by the boss, it'll now broadcast it to those players involved.§
+* Before, when those involved, get defeated by the Boss, it would only broadcast it to the one that died last.§
+* Now, it'll broadcast it to those that died by the boss during the event.§
+§
+- Fixed /broadcast permission from not working.
