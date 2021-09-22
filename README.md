@@ -1,4 +1,4 @@
-# An upcoming Network, providing mixed gamemodes in one.
+# An upcoming Network, providing multiple gamemodes and fun mini-games!
 
 # Coming soon
 
